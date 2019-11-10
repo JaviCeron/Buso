@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".RegistroTerminal"></activity>
+=======
+        <activity android:name=".cosulta_RecyclerView_Buso"></activity>
+>>>>>>> ccc8cab067c85d6d5db6f25e29cfab6dd6f64eed
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
