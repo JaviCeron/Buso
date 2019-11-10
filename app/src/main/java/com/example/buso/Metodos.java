@@ -16,8 +16,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Metodos {
-    public void guardar(final Context context, final String id, final String nombre){
-        String url = Conf.urlGuardar;
+    public void guardarTerminal(final Context context, final String nombre){
+        String url = Conf.urlGuardarTerminal;
         StringRequest request = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
@@ -51,7 +51,6 @@ public class Metodos {
                 Map<String, String> map = new HashMap<>();
                 map.put("Content-Type", "application/json; charset=utf-8");
                 map.put("Accept", "application/json");
-                map.put("id", id);
                 map.put("nombre", nombre);
                 return map;
             }
