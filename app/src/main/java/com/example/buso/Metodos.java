@@ -16,47 +16,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Metodos {
-    public void guardarTerminal(final Context context, final String nombre){
-        String url = Conf.urlGuardarTerminal;
-        StringRequest request = new StringRequest(Request.Method.POST, url,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
 
-                        try{
-                            JSONObject requestJSON = new JSONObject(response.toString());
-                            String estado = requestJSON.getString("estado");
-                            String mensaje = requestJSON.getString("mensaje");
 
-                            if(estado.equals("1")){
-                                Toast.makeText(context, mensaje, Toast.LENGTH_SHORT).show();
-                            }else if(estado.equals("2")){
-                                Toast.makeText(context, ""+mensaje, Toast.LENGTH_SHORT).show();
-                            }
-
-                        }catch (JSONException e){
-                            e.printStackTrace();
-                        }
-
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(context, "No se puedo guardar. \n" +
-                        "Verifique su conexión a internet.", Toast.LENGTH_SHORT).show();
-            }
-        }){
-            protected Map<String, String> getParams() throws AuthFailureError {
-                //En este método se colocan o se setean los valores a recibir por el fichero *.php
-                Map<String, String> map = new HashMap<>();
-                map.put("Content-Type", "application/json; charset=utf-8");
-                map.put("Accept", "application/json");
-                map.put("nombre", nombre);
-                return map;
-            }
-        };
-
-        MySingleton.getInstance(context).addToRequestQueue(request);
-
-    }
 }
