@@ -27,7 +27,8 @@ SET time_zone = "+00:00";
 --
 -- Estructura de tabla para la tabla `horario`
 --
-
+CREATE DATABASE 'mybuso';
+USE DATABASE 'mybuso';
 CREATE TABLE `horario` (
   `idhorario` int(11) NOT NULL,
   `hora_salida` time NOT NULL,
