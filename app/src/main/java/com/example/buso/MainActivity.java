@@ -41,12 +41,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View view) {
         Intent miIntent=null;
         switch (view.getId()){
-            case R.id.btnRegistroTerminal:
-                miIntent=new Intent(MainActivity.this,RegistroTerminal.class);
-                break;
-            case R.id.btnActualizarTerminal:
-                miIntent=new Intent(MainActivity.this,Actualizacion_Terminal.class);
-                break;
+
         }
         if (miIntent!=null){
             startActivity(miIntent);
