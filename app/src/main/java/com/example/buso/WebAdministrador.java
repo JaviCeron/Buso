@@ -11,6 +11,9 @@ public class WebAdministrador extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_administrador);
-        WebView webViewadmin =findViewById(R.id.webviewadmin);
+        WebView webviewadmin =findViewById(R.id.webviewadmin);
+        webviewadmin.getSettings().setJavaScriptEnabled(true);//Permite que algunas paginas funcionen bien
+        webviewadmin.getSettings().setBuiltInZoomControls(true);//Permite e zoom si la pagina no es responsive
+        webviewadmin.loadUrl("https://www.google.es/");
     }
 }
