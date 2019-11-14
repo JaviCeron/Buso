@@ -27,30 +27,20 @@
   <li><a href="index.php" title="<?php echo $_SESSION["email"]; ?>">Salir</a></li>
 </ul>
 
-  <!-- opciones del menú registrar-->
+  <!-- opciones del menú Terminal-->
   <ul id="registro" class="dropdown-content">
-    <li><a href="?c=Sala&a=Crud">Salas</a></li>
-    <li><a href="?c=Butaca&a=Crud">Butacas</a></li>
+    <li><a href="?c=Sala&a=Crud">Agregar</a></li>
+    <li><a href="?c=Butaca&a=Crud">Consulta</a></li>
     <li class="divider"></li>
-    <li><a href="?c=Pelicula&a=Crud">Películas</a></li>
-    <li><a href="?c=Horario&a=Crud">Horarios</a></li>
-    <li class="divider"></li>
-    <li><a href="?c=Cliente&a=Crud">Clientes</a></li>
-    <li class="divider"></li>
-    <li><a href="?c=Usuario&a=Crud">Usuarios</a></li>
+    
   </ul>
   
-  <!-- opciones del menú consultar-->
+  <!-- opciones del menú Bus-->
   <ul id="consulta" class="dropdown-content">
-    <li><a href="?c=Sala&a=Consultar">Salas</a></li>
-    <li><a href="?c=Butaca&a=Consultar">Butacas</a></li>
+    <li><a href="?c=Sala&a=Consultar">Agregar</a></li>
+    <li><a href="?c=Butaca&a=Consultar">Consultar</a></li>
     <li class="divider"></li>
-    <li><a href="?c=Pelicula&a=Consultar">Películas</a></li>
-    <li><a href="?c=Horario&a=Consultar">Horarios</a></li>
-    <li class="divider"></li>
-    <li><a href="?c=Cliente&a=Consultar">Clientes</a></li>
-    <li class="divider"></li>
-    <li><a href="?c=Usuario&a=Consultar">Usuarios</a></li>
+    
   </ul>
 
 
@@ -63,38 +53,28 @@
 </ul>
   <!-- opciones del menú registrar-->
   <ul id="registro-m" class="dropdown-content">
-    <li><a href="?c=Sala&a=Crud">Salas</a></li>
-    <li><a href="?c=Butaca&a=Crud">Butacas</a></li>
+    <li><a href="?c=Sala&a=Crud">Agregar</a></li>
+    <li><a href="?c=Butaca&a=Crud">Consultar</a></li>
     <li class="divider"></li>
-    <li><a href="?c=Pelicula&a=Crud">Películas</a></li>
-    <li><a href="?c=Horario&a=Crud">Horarios</a></li>
-    <li class="divider"></li>
-    <li><a href="?c=Cliente&a=Crud">Clientes</a></li>
-    <li class="divider"></li>
-    <li><a href="?c=Usuario&a=Crud">Usuarios</a></li>
+   
   </ul>
   
   <!-- opciones del menú consultar-->
   <ul id="consulta-m" class="dropdown-content">
-    <li><a href="?c=Sala&a=Consultar">Salas</a></li>
-    <li><a href="?c=Butaca&a=Consultar">Butacas</a></li>
+    <li><a href="?c=Sala&a=Consultar">Agregar</a></li>
+    <li><a href="?c=Butaca&a=Consultar">Consultar</a></li>
     <li class="divider"></li>
-    <li><a href="?c=Pelicula&a=Consultar">Películas</a></li>
-    <li><a href="?c=Horario&a=Consultar">Horarios</a></li>
-    <li class="divider"></li>
-    <li><a href="?c=Cliente&a=Consultar">Clientes</a></li>
-    <li class="divider"></li>
-    <li><a href="?c=Usuario&a=Consultar">Usuarios</a></li>
+    
   </ul>
-  <nav class="pink darken-4" role="navigation">
+  <nav class="green darken-4" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="?c=Principal&a=Index" class="brand-logo" title="Cine para todos...">
         <i class="large material-icons">movie_filter ondemand_video</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="?c=Principal&a=Index" title="Inicio"><i class="material-icons">home</i></a></li>
         <!-- para el menú registro -->
-        <li><a class="dropdown-trigger" href="#!" data-target="registro">Registrar<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="registro">Terminal<i class="material-icons right">arrow_drop_down</i></a></li>
         <!-- para el menú cosulta -->
-        <li><a class="dropdown-trigger" href="#!" data-target="consulta">Consultar<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="consulta">Bus<i class="material-icons right">arrow_drop_down</i></a></li>
        
         <li><a href="?c=Boletousuario&a=Busqueda" title="Imprimir Boletos"><i class="material-icons white-text">printinsert_drive_file</i></a></li>
        
@@ -105,9 +85,9 @@
       <ul id="nav-mobile" class="sidenav grey darken-2">
         <li><a href="?c=Principal&a=Index" title="Inicio"><i class="material-icons white-text">home</i></a></li>
         <!-- para el menú registro -->
-        <li><a class="dropdown-trigger white-text" href="#!" data-target="registro-m">Registrar<i class="material-icons right white-text">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-trigger white-text" href="#!" data-target="registro-m">Terminal<i class="material-icons right white-text">arrow_drop_down</i></a></li>
         <!-- para el menú cosulta -->
-        <li><a class="dropdown-trigger white-text" href="#!" data-target="consulta-m">Consultar<i class="material-icons right white-text">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-trigger white-text" href="#!" data-target="consulta-m">Bus<i class="material-icons right white-text">arrow_drop_down</i></a></li>
        
         <li><a href="?c=Boletousuario&a=Busqueda" title="Imprimir Boletos" class="white-text"><i class="material-icons white-text">printinsert_drive_file</i>Imprimir Boletos</a></li>
        
