@@ -68,7 +68,7 @@
   </ul>
   <nav class="green darken-4" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="?c=Principal&a=Index" class="brand-logo" title="Cine para todos...">
-        <i class="large material-icons">movie_filter ondemand_video</i></a>
+        <i >Buso</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="?c=Principal&a=Index" title="Inicio"><i class="material-icons">home</i></a></li>
         <!-- para el menú registro -->
