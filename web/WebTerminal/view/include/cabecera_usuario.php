@@ -76,7 +76,6 @@
         <!-- para el menú cosulta -->
         <li><a class="dropdown-trigger" href="#!" data-target="consulta">Bus<i class="material-icons right">arrow_drop_down</i></a></li>
        
-        <li><a href="?c=Boletousuario&a=Busqueda" title="Imprimir Boletos"><i class="material-icons white-text">printinsert_drive_file</i></a></li>
        
         <li><a class="dropdown-trigger" href="#!" data-target="usuario"><?php echo $_SESSION["nombre"]." ".$_SESSION["apellido"]; ?><i class="material-icons right">arrow_drop_down</i></a></li>
         
@@ -89,7 +88,7 @@
         <!-- para el menú cosulta -->
         <li><a class="dropdown-trigger white-text" href="#!" data-target="consulta-m">Bus<i class="material-icons right white-text">arrow_drop_down</i></a></li>
        
-        <li><a href="?c=Boletousuario&a=Busqueda" title="Imprimir Boletos" class="white-text"><i class="material-icons white-text">printinsert_drive_file</i>Imprimir Boletos</a></li>
+        
        
         <li><a class="dropdown-trigger white-text" href="#!" data-target="usuario-m"><?php echo $_SESSION["nombre"]." ".$_SESSION["apellido"]; ?><i class="material-icons right">arrow_drop_down</i></a></li>
         
