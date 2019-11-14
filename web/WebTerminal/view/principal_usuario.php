@@ -4,9 +4,11 @@
       <br><br>
      
       <!--<div aling =" center"><img  width="250px" height="200px"  src="view/include/bus/bus.png" alt="Imagen" ></td>-->
-   <img  src="view/include/bus/bus.png" class="center">
-      <h3 class="header center grey-text text-darken-2">Bienvenid@</h3>
+   
+      <h2 class="header center grey-text text-darken-2">Bienvenid@</h2>
       <h3 class="header center grey-text text-darken-2"><?php echo $_SESSION["nombre"]." ".$_SESSION["apellido"]; ?></h3>
+      <br>
+      <img width="1000px" height="275px" src="view/include/images/bus.png" class="center">
     </div>
       </div>
     </div>
