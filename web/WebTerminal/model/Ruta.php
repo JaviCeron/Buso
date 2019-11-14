@@ -1,14 +1,14 @@
 <?php
-class Bus
+class Ruta
 {
 	private $pdo;
     
-    public $idbus;
+    public $idruta;
     public $numero_ruta;
     public $nombre_bus;
     public $tarifa;
     public $idterminal;
-    public $idhorario;
+  
 
 	public function __CONSTRUCT()
 	{
@@ -26,45 +26,7 @@ class Bus
 		}
 	}
 
-	public function ListarButacaActivas()
-	{
-		try
-		{
 
-			$stm = $this->pdo->prepare("SELECT b.idbutaca as idbutaca, b.nombre as nombre, s.nombre as sala, b.estado as estado FROM butaca as b INNER JOIN sala as s ON b.idsala = s.idsala WHERE b.estado = 1");
-			$stm->execute();
-
-			return $stm->fetchAll(PDO::FETCH_OBJ);
-		}
-        catch (Throwable $t)//php7
-        {
-			die($t->getMessage());
-        }
-		catch(Exception $e)//php5
-		{
-			die($e->getMessage());
-		}
-	}
-
-	public function ListarButacaInactivas()
-	{
-		try
-		{
-
-			$stm = $this->pdo->prepare("SELECT b.idbutaca as idbutaca, b.nombre as nombre, s.nombre as sala, b.estado as estado FROM butaca as b INNER JOIN sala as s ON b.idsala = s.idsala WHERE b.estado = 0");
-			$stm->execute();
-
-			return $stm->fetchAll(PDO::FETCH_OBJ);
-		}
-        catch (Throwable $t)//php7
-        {
-			die($t->getMessage());
-        }
-		catch(Exception $e)//php5
-		{
-			die($e->getMessage());
-		}
-	}
 
 	public function ObtenerButaca($id)
 	{
@@ -86,7 +48,19 @@ class Bus
 			die($e->getMessage());
 		}
 	}
-	
+	public function Eliminarempleados($id)
+	{
+		try 
+		{
+			$stm = $this->pdo
+			            ->prepare("DELETE FROM empleados WHERE idempleado = ?");			          
+
+			$stm->execute(array($id));
+		} catch (Exception $e) 
+		{
+			die($e->getMessage());
+		}
+	}
 
 	public function CambiarEstadobutaca($nuevo_estado, $id)
 	{

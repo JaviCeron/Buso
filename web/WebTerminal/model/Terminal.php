@@ -1,14 +1,11 @@
 <?php
-class Bus
+class Terminal
 {
 	private $pdo;
     
-    public $idbus;
-    public $numero_ruta;
-    public $nombre_bus;
-    public $tarifa;
     public $idterminal;
-    public $idhorario;
+    public $nombre_terminal;
+    
 
 	public function __CONSTRUCT()
 	{
@@ -26,52 +23,27 @@ class Bus
 		}
 	}
 
-	public function ListarButacaActivas()
-	{
-		try
-		{
 
-			$stm = $this->pdo->prepare("SELECT b.idbutaca as idbutaca, b.nombre as nombre, s.nombre as sala, b.estado as estado FROM butaca as b INNER JOIN sala as s ON b.idsala = s.idsala WHERE b.estado = 1");
-			$stm->execute();
-
-			return $stm->fetchAll(PDO::FETCH_OBJ);
-		}
-        catch (Throwable $t)//php7
-        {
-			die($t->getMessage());
-        }
-		catch(Exception $e)//php5
-		{
-			die($e->getMessage());
-		}
-	}
-
-	public function ListarButacaInactivas()
-	{
-		try
-		{
-
-			$stm = $this->pdo->prepare("SELECT b.idbutaca as idbutaca, b.nombre as nombre, s.nombre as sala, b.estado as estado FROM butaca as b INNER JOIN sala as s ON b.idsala = s.idsala WHERE b.estado = 0");
-			$stm->execute();
-
-			return $stm->fetchAll(PDO::FETCH_OBJ);
-		}
-        catch (Throwable $t)//php7
-        {
-			die($t->getMessage());
-        }
-		catch(Exception $e)//php5
-		{
-			die($e->getMessage());
-		}
-	}
-
-	public function ObtenerButaca($id)
+	public function EliminarTerminal($id)
 	{
 		try 
 		{
 			$stm = $this->pdo
-			          ->prepare("SELECT * FROM butaca WHERE idbutaca = ?");
+			            ->prepare("DELETE FROM empleados WHERE idempleado = ?");			          
+
+			$stm->execute(array($id));
+		} catch (Exception $e) 
+		{
+			die($e->getMessage());
+		}
+	}
+
+	public function ObtenerTerminal($id)
+	{
+		try 
+		{
+			$stm = $this->pdo
+			          ->prepare("SELECT * FROM terminal WHERE idterminal = ?");
 			          
 
 			$stm->execute(array($id));
@@ -88,46 +60,19 @@ class Bus
 	}
 	
 
-	public function CambiarEstadobutaca($nuevo_estado, $id)
+	public function ActualizarTerminal($data)
 	{
 		try 
 		{
-			$sql = "UPDATE butaca SET 
-						estado      = ?
-				    WHERE idbutaca  = ?";
+			$sql = "UPDATE terminal SET 
+						nombre_terminal = ?
+					
+				    WHERE idterminal = ?";
 
 			$this->pdo->prepare($sql)
 			     ->execute(
 				    array(
-                        $nuevo_estado,
-                        $id
-					)
-				);
-		}
-        catch (Throwable $t)//php7
-        {
-			die($t->getMessage());
-        }
-		catch(Exception $e)//php5
-		{
-			die($e->getMessage());
-		}
-	}
-
-	public function ActualizarButaca($data)
-	{
-		try 
-		{
-			$sql = "UPDATE butaca SET 
-						nombre = ?, 
-						idsala  = ?
-				    WHERE idbutaca = ?";
-
-			$this->pdo->prepare($sql)
-			     ->execute(
-				    array(
-                        $data->nombre, 
-                        $data->idsala,
+                        $data->nombre_terminal,
                         $data->idbutaca
 					)
 				);
@@ -142,18 +87,18 @@ class Bus
 		}
 	}
 
-	public function RegistrarButaca($data)
+	public function RegistrarTerminal($data)
 	{
 		try 
 		{
-		$sql = "INSERT INTO butaca (nombre, idsala) 
-		        VALUES (?, ?)";
+		$sql = "INSERT INTO terminal (nombre_terminal) 
+		        VALUES (?)";
 
 		$this->pdo->prepare($sql)
 		     ->execute(
 				array(                
-                    $data->nombre, 
-                    $data->idsala
+                    $data->nombre_terminal
+                  
                 )
 			);
 		}

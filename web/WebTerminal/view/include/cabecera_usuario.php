@@ -29,28 +29,24 @@
 
   <!-- opciones del menú registrar-->
   <ul id="registro" class="dropdown-content">
-    <li><a href="?c=Sala&a=Crud">Salas</a></li>
-    <li><a href="?c=Butaca&a=Crud">Butacas</a></li>
+    <li><a href="?c=Terminal&a=Crud">Terminal</a></li>
+    <li><a href="?c=Butaca&a=Crud">Ruta</a></li>
     <li class="divider"></li>
-    <li><a href="?c=Pelicula&a=Crud">Películas</a></li>
-    <li><a href="?c=Horario&a=Crud">Horarios</a></li>
+    <li><a href="?c=Pelicula&a=Crud">Horario</a></li>
+    <li><a href="?c=Horario&a=Crud">Usuario</a></li>
     <li class="divider"></li>
-    <li><a href="?c=Cliente&a=Crud">Clientes</a></li>
-    <li class="divider"></li>
-    <li><a href="?c=Usuario&a=Crud">Usuarios</a></li>
+   
   </ul>
   
   <!-- opciones del menú consultar-->
   <ul id="consulta" class="dropdown-content">
-    <li><a href="?c=Sala&a=Consultar">Salas</a></li>
-    <li><a href="?c=Butaca&a=Consultar">Butacas</a></li>
+    <li><a href="?c=Sala&a=Consultar">Terminal</a></li>
+    <li><a href="?c=Butaca&a=Consultar">Ruta</a></li>
     <li class="divider"></li>
-    <li><a href="?c=Pelicula&a=Consultar">Películas</a></li>
-    <li><a href="?c=Horario&a=Consultar">Horarios</a></li>
+    <li><a href="?c=Pelicula&a=Consultar">Horario</a></li>
+    <li><a href="?c=Horario&a=Consultar">Usuario</a></li>
     <li class="divider"></li>
-    <li><a href="?c=Cliente&a=Consultar">Clientes</a></li>
-    <li class="divider"></li>
-    <li><a href="?c=Usuario&a=Consultar">Usuarios</a></li>
+   
   </ul>
 
 
@@ -63,28 +59,24 @@
 </ul>
   <!-- opciones del menú registrar-->
   <ul id="registro-m" class="dropdown-content">
-    <li><a href="?c=Sala&a=Crud">Salas</a></li>
-    <li><a href="?c=Butaca&a=Crud">Butacas</a></li>
+    <li><a href="?c=Terminal&a=Crud">Terminal</a></li>
+    <li><a href="?c=Butaca&a=Crud">Ruta</a></li>
     <li class="divider"></li>
-    <li><a href="?c=Pelicula&a=Crud">Películas</a></li>
-    <li><a href="?c=Horario&a=Crud">Horarios</a></li>
+    <li><a href="?c=Pelicula&a=Crud">Horario</a></li>
+    <li><a href="?c=Horario&a=Crud">Usuarios</a></li>
     <li class="divider"></li>
-    <li><a href="?c=Cliente&a=Crud">Clientes</a></li>
-    <li class="divider"></li>
-    <li><a href="?c=Usuario&a=Crud">Usuarios</a></li>
+   
   </ul>
   
   <!-- opciones del menú consultar-->
   <ul id="consulta-m" class="dropdown-content">
-    <li><a href="?c=Sala&a=Consultar">Salas</a></li>
-    <li><a href="?c=Butaca&a=Consultar">Butacas</a></li>
+    <li><a href="?c=Sala&a=Consultar">Terminal</a></li>
+    <li><a href="?c=Butaca&a=Consultar">Ruta</a></li>
     <li class="divider"></li>
-    <li><a href="?c=Pelicula&a=Consultar">Películas</a></li>
-    <li><a href="?c=Horario&a=Consultar">Horarios</a></li>
+    <li><a href="?c=Pelicula&a=Consultar">Horario</a></li>
+    <li><a href="?c=Horario&a=Consultar">Usuarios</a></li>
     <li class="divider"></li>
-    <li><a href="?c=Cliente&a=Consultar">Clientes</a></li>
-    <li class="divider"></li>
-    <li><a href="?c=Usuario&a=Consultar">Usuarios</a></li>
+  
   </ul>
   <nav class="pink darken-4" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="?c=Principal&a=Index" class="brand-logo" title="Cine para todos...">
