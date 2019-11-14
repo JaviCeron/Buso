@@ -27,8 +27,9 @@
   <li><a href="index.php" title="<?php echo $_SESSION["email"]; ?>">Salir</a></li>
 </ul>
 
-  <!-- opciones del menú registrar-->
+  <!-- opciones del menú Terminal-->
   <ul id="registro" class="dropdown-content">
+<<<<<<< HEAD
     <li><a href="?c=Terminal&a=Crud">Terminal</a></li>
     <li><a href="?c=Butaca&a=Crud">Ruta</a></li>
     <li class="divider"></li>
@@ -36,10 +37,17 @@
     <li><a href="?c=Horario&a=Crud">Usuario</a></li>
     <li class="divider"></li>
    
+=======
+    <li><a href="?c=Sala&a=Crud">Agregar</a></li>
+    <li><a href="?c=Butaca&a=Crud">Consulta</a></li>
+    <li class="divider"></li>
+    
+>>>>>>> d5f5c4814763f872a38f5862b1270e30213f4bd7
   </ul>
   
-  <!-- opciones del menú consultar-->
+  <!-- opciones del menú Bus-->
   <ul id="consulta" class="dropdown-content">
+<<<<<<< HEAD
     <li><a href="?c=Sala&a=Consultar">Terminal</a></li>
     <li><a href="?c=Butaca&a=Consultar">Ruta</a></li>
     <li class="divider"></li>
@@ -47,6 +55,12 @@
     <li><a href="?c=Horario&a=Consultar">Usuario</a></li>
     <li class="divider"></li>
    
+=======
+    <li><a href="?c=Sala&a=Consultar">Agregar</a></li>
+    <li><a href="?c=Butaca&a=Consultar">Consultar</a></li>
+    <li class="divider"></li>
+    
+>>>>>>> d5f5c4814763f872a38f5862b1270e30213f4bd7
   </ul>
 
 
@@ -59,17 +73,23 @@
 </ul>
   <!-- opciones del menú registrar-->
   <ul id="registro-m" class="dropdown-content">
+<<<<<<< HEAD
     <li><a href="?c=Terminal&a=Crud">Terminal</a></li>
     <li><a href="?c=Butaca&a=Crud">Ruta</a></li>
     <li class="divider"></li>
     <li><a href="?c=Pelicula&a=Crud">Horario</a></li>
     <li><a href="?c=Horario&a=Crud">Usuarios</a></li>
+=======
+    <li><a href="?c=Sala&a=Crud">Agregar</a></li>
+    <li><a href="?c=Butaca&a=Crud">Consultar</a></li>
+>>>>>>> d5f5c4814763f872a38f5862b1270e30213f4bd7
     <li class="divider"></li>
    
   </ul>
   
   <!-- opciones del menú consultar-->
   <ul id="consulta-m" class="dropdown-content">
+<<<<<<< HEAD
     <li><a href="?c=Sala&a=Consultar">Terminal</a></li>
     <li><a href="?c=Butaca&a=Consultar">Ruta</a></li>
     <li class="divider"></li>
@@ -77,18 +97,23 @@
     <li><a href="?c=Horario&a=Consultar">Usuarios</a></li>
     <li class="divider"></li>
   
+=======
+    <li><a href="?c=Sala&a=Consultar">Agregar</a></li>
+    <li><a href="?c=Butaca&a=Consultar">Consultar</a></li>
+    <li class="divider"></li>
+    
+>>>>>>> d5f5c4814763f872a38f5862b1270e30213f4bd7
   </ul>
-  <nav class="pink darken-4" role="navigation">
+  <nav class="green darken-4" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="?c=Principal&a=Index" class="brand-logo" title="Cine para todos...">
-        <i class="large material-icons">movie_filter ondemand_video</i></a>
+        <i >Buso</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="?c=Principal&a=Index" title="Inicio"><i class="material-icons">home</i></a></li>
         <!-- para el menú registro -->
-        <li><a class="dropdown-trigger" href="#!" data-target="registro">Registrar<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="registro">Terminal<i class="material-icons right">arrow_drop_down</i></a></li>
         <!-- para el menú cosulta -->
-        <li><a class="dropdown-trigger" href="#!" data-target="consulta">Consultar<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="consulta">Bus<i class="material-icons right">arrow_drop_down</i></a></li>
        
-        <li><a href="?c=Boletousuario&a=Busqueda" title="Imprimir Boletos"><i class="material-icons white-text">printinsert_drive_file</i></a></li>
        
         <li><a class="dropdown-trigger" href="#!" data-target="usuario"><?php echo $_SESSION["nombre"]." ".$_SESSION["apellido"]; ?><i class="material-icons right">arrow_drop_down</i></a></li>
         
@@ -97,11 +122,11 @@
       <ul id="nav-mobile" class="sidenav grey darken-2">
         <li><a href="?c=Principal&a=Index" title="Inicio"><i class="material-icons white-text">home</i></a></li>
         <!-- para el menú registro -->
-        <li><a class="dropdown-trigger white-text" href="#!" data-target="registro-m">Registrar<i class="material-icons right white-text">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-trigger white-text" href="#!" data-target="registro-m">Terminal<i class="material-icons right white-text">arrow_drop_down</i></a></li>
         <!-- para el menú cosulta -->
-        <li><a class="dropdown-trigger white-text" href="#!" data-target="consulta-m">Consultar<i class="material-icons right white-text">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-trigger white-text" href="#!" data-target="consulta-m">Bus<i class="material-icons right white-text">arrow_drop_down</i></a></li>
        
-        <li><a href="?c=Boletousuario&a=Busqueda" title="Imprimir Boletos" class="white-text"><i class="material-icons white-text">printinsert_drive_file</i>Imprimir Boletos</a></li>
+        
        
         <li><a class="dropdown-trigger white-text" href="#!" data-target="usuario-m"><?php echo $_SESSION["nombre"]." ".$_SESSION["apellido"]; ?><i class="material-icons right">arrow_drop_down</i></a></li>
         
