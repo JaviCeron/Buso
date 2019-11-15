@@ -81,8 +81,8 @@ public class Recyclerview_terminales extends AppCompatActivity {
                         terminalList.add(new Terminal(
                             terminalObject1.getString("terminal_salida")));
                     }
-                      //  adapter = new TerminalesAdapter(Recyclerview_terminales.this, terminalList);
-                        rvTerminales.setAdapter(/*adapter*/);
+                       adapter = new TerminalesAdapter(Recyclerview_terminales.this, terminalList);
+                        rvTerminales.setAdapter(adapter);
 
                 } catch (Exception e) {
                     e.printStackTrace();
