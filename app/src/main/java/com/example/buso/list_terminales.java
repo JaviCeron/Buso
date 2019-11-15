@@ -8,7 +8,9 @@ import android.widget.TextView;
 
 public class list_terminales extends AppCompatActivity {
         private TextView tv1;
-        private ListView l;
+        private ListView lv1;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

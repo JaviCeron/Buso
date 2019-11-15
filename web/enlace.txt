@@ -1,0 +1,1 @@
+https://es.stackoverflow.com/questions/42605/llenar-datos-a-un-listview-personalizado-desde-servidor-web-service
