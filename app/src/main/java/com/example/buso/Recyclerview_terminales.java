@@ -71,8 +71,18 @@ public class Recyclerview_terminales extends AppCompatActivity {
                     JSONObject jsonObject = new JSONObject(response);
                     JSONArray jsonArray = new JSONArray("terminal");
                     for (int i = 0; i< jsonArray.length(); i++){
-                        JSONObject jsonObject1 = jsonArray.getJSONObject(i)
+                        JSONObject terminalObject1 = jsonArray.getJSONObject(i);
+
+                        //String nombre = terminalObject1.getString("nombre");
+                        String terminal_salida = terminalObject1.getString("terminal_salida");
+                        Terminal objeto =new Terminal(terminal_salida);
+                        terminalList.add(objeto);
+
+                        terminalList.add(new Terminal(
+                            terminalObject1.getString("terminal_salida");
+                        ));
                     }
+                        adapter
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
