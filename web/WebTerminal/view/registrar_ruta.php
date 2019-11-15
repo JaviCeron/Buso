@@ -58,26 +58,10 @@
                       <label for="selidterminalorigen ">Terminal origen</label>
                     </div>
 
-                  
                     <div class="input-field col s6">
-                      <select name="selidterminaldestino" id="selidterminaldestino">
-                        <?php 
-                          if ($ruta->idterminal != null) {
-                            # mostrar el id y sala al inicio
-
-                            $objSala = $terminal->ObtenerTerminal($ruta->idterminal);
-                            
-                            echo '<option value="'.$objSala->idterminal.'" selected>'.$objSala->nombre_terminal.'</option>';
-
-                          }
-                        ?>
-                         <?php foreach($terminal->ListarTerminal() as $r): ?>
-                          <option value="<?php echo $r->idterminal; ?>"><?php echo $r->nombre_terminal; ?></option>
-                      <?php endforeach; ?>
-                      
-                        </select>
-                      <label for="selidterminaldestino">Terminal de destino</label>
-                    </div>
+                    <input id="selidterminaldestino" type="text" class="validate" name="selidterminaldestino" value="<?php echo $ruta->terminal_destino; ?>"  required>
+                    <label for="selidterminaldestino">Lugar de destino</label>
+                  </div>
                     
                   
                   <div class="input-field col s12 center">

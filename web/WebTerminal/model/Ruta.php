@@ -27,7 +27,25 @@ class Ruta
 	}
 
 
+    public function ListarRuta()
+	{
+		try
+		{
 
+			$stm = $this->pdo->prepare("SELECT h.idruta as idruta, h.numero_ruta as numero_ruta, h.nombre_bus as nombre_bus, h.tarifa as tarifa,  s.nombre_terminal as nombre_origen, h.terminal_destino as nombre_destino FROM ruta as h INNER JOIN terminal AS s ON h.idterminal = s.idterminal  ORDER BY numero_ruta desc");
+			$stm->execute();
+
+			return $stm->fetchAll(PDO::FETCH_OBJ);
+		}
+        catch (Throwable $t)//php7
+        {
+			die($t->getMessage());
+        }
+		catch(Exception $e)//php5
+		{
+			die($e->getMessage());
+		}
+	}
 	public function ObtenerRuta($id)
 	{
 		try 
