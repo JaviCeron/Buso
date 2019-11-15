@@ -31,6 +31,10 @@ class RutaController{
         require_once 'view/include/pie.php';
     }
 
+    public function EliminarRuta(){
+        $this->model->EliminarRuta($_REQUEST['id']);
+        header('Location: index.php?c=Ruta&a=Consultar');
+    }
     public function Crud(){
         $ruta = new Ruta();
         

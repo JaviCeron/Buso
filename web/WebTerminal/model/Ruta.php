@@ -66,12 +66,12 @@ class Ruta
 			die($e->getMessage());
 		}
 	}
-	public function Eliminarempleados($id)
+	public function EliminarRuta($id)
 	{
 		try 
 		{
 			$stm = $this->pdo
-			            ->prepare("DELETE FROM empleados WHERE idempleado = ?");			          
+			            ->prepare("DELETE FROM ruta WHERE idruta = ?");			          
 
 			$stm->execute(array($id));
 		} catch (Exception $e) 

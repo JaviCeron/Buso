@@ -22,6 +22,7 @@
                         <th>Terminal destino</th>
 
                         <th>Editar</th>
+                        <th>Eliminar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,6 +38,9 @@
                             <!-- en la url pasamos parámetros para el controlador -->
                             <!--    controller, metod,id -->
                             <a href="?c=Ruta&a=Crud&id=<?php echo $r->idruta; ?>" title="Editar ruta" ><i class="small material-icons">edit</i></a>
+                        </td>
+                        <td>
+                            <a onclick="javascript:return confirm('¿Seguro que desea eliminar esta ruta?');" href="?c=Ruta&a=EliminarRuta&id=<?php echo $r->idruta; ?>" title="Eliminar Registro" ><i class="small material-icons red-text">delete</i></a>
                         </td>
                      
                     </tr>
