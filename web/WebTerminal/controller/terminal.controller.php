@@ -27,7 +27,7 @@ class TerminalController{
     public function Consultar(){
         //llama todas las partes de la vista principal
         require_once 'view/include/cabecera_usuario.php';
-        require_once 'view/mostrar_usuario.php';
+        require_once 'view/mostrar_terminal.php';
         require_once 'view/include/pie.php';
     }
 

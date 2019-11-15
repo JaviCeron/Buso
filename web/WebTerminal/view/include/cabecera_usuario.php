@@ -30,7 +30,7 @@
    <!-- opciones del menú registrar-->
    <ul id="registro" class="dropdown-content">
     <li><a href="?c=Terminal&a=Crud">Terminal</a></li>
-    <li><a href="?c=Butaca&a=Crud">Ruta</a></li>
+    <li><a href="?c=Ruta&a=Crud">Ruta</a></li>
     <li class="divider"></li>
     <li><a href="?c=Pelicula&a=Crud">Horario</a></li>
     <li><a href="?c=Horario&a=Crud">Usuario</a></li>
@@ -43,8 +43,8 @@
   <!-- opciones del menú consultar-->
  
   <ul id="consulta" class="dropdown-content">
-    <li><a href="?c=Sala&a=Consultar">Terminal</a></li>
-    <li><a href="?c=Butaca&a=Consultar">Ruta</a></li>
+    <li><a href="?c=Terminal&a=Consultar">Terminal</a></li>
+    <li><a href="?c=Ruta&a=Consultar">Ruta</a></li>
     <li class="divider"></li>
     <li><a href="?c=Pelicula&a=Consultar">Horario</a></li>
     <li><a href="?c=Horario&a=Consultar">Usuario</a></li>
@@ -64,7 +64,7 @@
   <ul id="registro-m" class="dropdown-content">
 
     <li><a href="?c=Terminal&a=Crud">Terminal</a></li>
-    <li><a href="?c=Butaca&a=Crud">Ruta</a></li>
+    <li><a href="?c=Ruta&a=Crud">Ruta</a></li>
     <li class="divider"></li>
     <li><a href="?c=Pelicula&a=Crud">Horario</a></li>
     <li><a href="?c=Horario&a=Crud">Usuarios</a></li>
@@ -76,8 +76,8 @@
   <!-- opciones del menú consultar-->
   <ul id="consulta-m" class="dropdown-content">
 
-    <li><a href="?c=Sala&a=Consultar">Terminal</a></li>
-    <li><a href="?c=Butaca&a=Consultar">Ruta</a></li>
+    <li><a href="?c=Terminal&a=Consultar">Terminal</a></li>
+    <li><a href="?c=Ruta&a=Consultar">Ruta</a></li>
     <li class="divider"></li>
     <li><a href="?c=Pelicula&a=Consultar">Horario</a></li>
     <li><a href="?c=Horario&a=Consultar">Usuarios</a></li>
