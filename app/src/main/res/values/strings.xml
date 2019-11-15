@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Buso</string>
-    <string name="Textview">Lista de Terminales</string>
+    <string name="URL">http://buso.000webhostapp.com/buso/listar_terminal.php</string>
 </resources>
