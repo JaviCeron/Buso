@@ -12,7 +12,6 @@
               
               <table class="striped">
                 <thead>
-               
                 <tr>
                           <th class="center">Id</th>
                           <th>Nombre</th>
