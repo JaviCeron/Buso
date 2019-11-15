@@ -8,7 +8,7 @@ class Usuario
     public $apellido;
     public $email;
     public $clave;
-   
+    public $estado;
 
 	public function __CONSTRUCT()
 	{
@@ -31,7 +31,7 @@ class Usuario
 		try 
 		{
 			$stm = $this->pdo
-			          ->prepare("SELECT * FROM usuario WHERE email = ? AND clave = MD5(?)");
+			          ->prepare("SELECT * FROM usuario WHERE email = ? AND clave = MD5(?) AND estado = 1");
 			          
 
 			$stm->execute(array($email, $clave));
@@ -48,8 +48,45 @@ class Usuario
 		}
 	}
 
+	public function ListarUsuarioActivos()
+	{
+		try
+		{
 
+			$stm = $this->pdo->prepare("SELECT idusuario, nombre, apellido, email FROM usuario WHERE estado = 1");
+			$stm->execute();
 
+			return $stm->fetchAll(PDO::FETCH_OBJ);
+		}
+        catch (Throwable $t)//php7
+        {
+			die($t->getMessage());
+        }
+		catch(Exception $e)//php5
+		{
+			die($e->getMessage());
+		}
+	}
+
+	public function ListarUsuarioInactivos()
+	{
+		try
+		{
+
+			$stm = $this->pdo->prepare("SELECT idusuario, nombre, apellido, email FROM usuario WHERE estado = 0");
+			$stm->execute();
+
+			return $stm->fetchAll(PDO::FETCH_OBJ);
+		}
+        catch (Throwable $t)//php7
+        {
+			die($t->getMessage());
+        }
+		catch(Exception $e)//php5
+		{
+			die($e->getMessage());
+		}
+	}
 
 	public function ObtenerUsuario($id)
 	{
@@ -73,6 +110,31 @@ class Usuario
 	}
 	
 
+	public function CambiarEstadoUsuario($nuevo_estado, $id)
+	{
+		try 
+		{
+			$sql = "UPDATE usuario SET 
+						estado      = ?
+				    WHERE idusuario = ?";
+
+			$this->pdo->prepare($sql)
+			     ->execute(
+				    array(
+                        $nuevo_estado,
+                        $id
+					)
+				);
+		}
+        catch (Throwable $t)//php7
+        {
+			die($t->getMessage());
+        }
+		catch(Exception $e)//php5
+		{
+			die($e->getMessage());
+		}
+	}
 
 	public function ActualizarUsuario($data)
 	{
