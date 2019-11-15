@@ -32,7 +32,7 @@
     <li><a href="?c=Terminal&a=Crud">Terminal</a></li>
     <li><a href="?c=Ruta&a=Crud">Ruta</a></li>
     <li class="divider"></li>
-    <li><a href="?c=Pelicula&a=Crud">Horario</a></li>
+    <li><a href="?c=Horario&a=Crud">Horario</a></li>
     <li><a href="?c=Horario&a=Crud">Usuario</a></li>
     <li class="divider"></li>
   
@@ -66,8 +66,8 @@
     <li><a href="?c=Terminal&a=Crud">Terminal</a></li>
     <li><a href="?c=Ruta&a=Crud">Ruta</a></li>
     <li class="divider"></li>
-    <li><a href="?c=Pelicula&a=Crud">Horario</a></li>
-    <li><a href="?c=Horario&a=Crud">Usuarios</a></li>
+    <li><a href="?c=Horario&a=Crud">Horario</a></li>
+    <li><a href="">Usuarios</a></li>
 
     <li class="divider"></li>
    

@@ -31,6 +31,10 @@ class HorarioController{
         require_once 'view/include/pie.php';
     }
 
+    public function EliminarTerminal(){
+        $this->model->EliminaTerminal($_REQUEST['id']);
+        header('Location: index.php?c=Terminal&a=Consultar');
+    }
     public function Crud(){
         $horario = new Horario();
         
@@ -50,10 +54,9 @@ class HorarioController{
         
         //captura todos los datos
         $horario->idhorario = $_REQUEST['txtIdhorario'];
-        $horario->fechapelicula = $_REQUEST['txtFechaPelicula'];
-        $horario->horapelicula = $_REQUEST['txtHoraPelicula'];
-        $horario->idpelicula = $_REQUEST['selPelicula'];
-        $horario->idsala = $_REQUEST['selSala'];
+        $horario->hora_salida = $_REQUEST['txthora_salida'];
+        $horario->hora_meta = $_REQUEST['txthora_meta'];
+        $horario->idruta = $_REQUEST['selSala'];
 
         //si el id es mayor que cero Actualiza si no registra
         $horario->idhorario > 0 
@@ -64,8 +67,5 @@ class HorarioController{
         header('Location: index.php?c=Horario&a=Consultar');
     }
     
-    public function CambiarEstado(){
-        $this->model->CambiarEstadoHorario($_REQUEST['nuevo_estado'],$_REQUEST['id']);
-        header('Location: index.php?c=Horario&a=Consultar');
-    }
+  
 }

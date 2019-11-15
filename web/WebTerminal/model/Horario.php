@@ -4,12 +4,10 @@ class Horario
 	private $pdo;
     
     public $idhorario;
-    public $fechapelicula;  
-    public $horapelicula;
-    public $idpelicula;
-    public $idsala;
-    public $estado;
-
+    public $hora_salida;  
+    public $hora_meta;
+    public $idruta;
+   
 	public function __CONSTRUCT()
 	{
 		try
@@ -26,12 +24,12 @@ class Horario
 		}
 	}
 
-	public function ListarHorarioActivos()
+	public function ListarHorario()
 	{
 		try
 		{
 
-			$stm = $this->pdo->prepare("SELECT h.idhorario as idhorario, h.fechapelicula as fechapelicula, h.horapelicula as horapelicula, s.idsala as idsala, s.nombre as sala, p.idpelicula as idpelicula, p.nombre as nombrepelicula, p.imagen as imagen, p.precio as precio FROM horario as h INNER JOIN sala AS s ON h.idsala = s.idsala INNER JOIN pelicula as p ON h.idpelicula = p.idpelicula WHERE h.estado = 1 ORDER BY fechapelicula");
+			$stm = $this->pdo->prepare("SELECT h.idhorario as idhorario, h.hora_salida as hora_salida, h.hora_meta as hora_meta, s.numero_ruta as numero_ruta FROM horario as h INNER JOIN ruta AS s ON h.idruta = s.idruta  ORDER BY hora_salida asc");
 			$stm->execute();
 
 			return $stm->fetchAll(PDO::FETCH_OBJ);
@@ -46,73 +44,30 @@ class Horario
 		}
 	}
 
-	public function ListarPeliculasHorario()
-	{
-		try
-		{
 
-			$stm = $this->pdo->prepare("SELECT DISTINCT p.idpelicula as idpelicula, p.nombre as nombrepelicula, p.imagen as imagen FROM horario as h INNER JOIN pelicula as p ON h.idpelicula = p.idpelicula WHERE h.estado = 1 ORDER BY fechapelicula DESC");
-			$stm->execute();
-
-			return $stm->fetchAll(PDO::FETCH_OBJ);
-		}
-        catch (Throwable $t)//php7
-        {
-			die($t->getMessage());
-        }
-		catch(Exception $e)//php5
-		{
-			die($e->getMessage());
-		}
-	}
-
-	public function ListarHorarioPorPelicula($idpelicula)
+	public function EliminarHorario($id)
 	{
 		try 
 		{
 			$stm = $this->pdo
-			          ->prepare("SELECT h.idhorario as idhorario, Date_format(h.fechapelicula,'%d-%m-%Y') as fechapelicula, h.horapelicula as horapelicula, s.nombre as sala FROM horario as h INNER JOIN sala AS s ON h.idsala = s.idsala INNER JOIN pelicula as p ON h.idpelicula = p.idpelicula WHERE h.idpelicula = ? ORDER BY fechapelicula");
-			          
-			$stm->execute(array($idpelicula));
-			return $stm->fetchAll(PDO::FETCH_OBJ);
-		}
-        catch (Throwable $t)//php7
-        {
-			die($t->getMessage());
-        }
-		catch(Exception $e)//php5
+			            ->prepare("DELETE FROM horario WHERE idhorario = ?");			          
+
+			$stm->execute(array($id));
+		} catch (Exception $e) 
 		{
 			die($e->getMessage());
 		}
 	}
 
-	public function ListarHorarioInactivos()
-	{
-		try
-		{
-
-			$stm = $this->pdo->prepare("SELECT h.idhorario as idhorario, h.fechapelicula as fechapelicula, h.horapelicula as horapelicula, s.nombre as sala, p.idpelicula as idpelicula, p.nombre as nombrepelicula, p.imagen as imagen, p.precio as precio FROM horario as h INNER JOIN sala AS s ON h.idsala = s.idsala INNER JOIN pelicula as p ON h.idpelicula = p.idpelicula WHERE h.estado = 0 ORDER BY fechapelicula");
-			$stm->execute();
-
-			return $stm->fetchAll(PDO::FETCH_OBJ);
-		}
-        catch (Throwable $t)//php7
-        {
-			die($t->getMessage());
-        }
-		catch(Exception $e)//php5
-		{
-			die($e->getMessage());
-		}
-	}
 
 	public function ObtenerHorario($id)
 	{
 		try 
 		{
 			$stm = $this->pdo
-			          ->prepare("SELECT h.idhorario as idhorario, Date_format(h.fechapelicula,'%d-%m-%Y') as fechapelicula, h.horapelicula as horapelicula, s.nombre as sala, s.idsala as idsala, p.idpelicula as idpelicula, p.nombre as nombrepelicula, p.imagen as imagen, p.precio as precio FROM horario as h INNER JOIN sala AS s ON h.idsala = s.idsala INNER JOIN pelicula as p ON h.idpelicula = p.idpelicula WHERE h.estado = 1 AND h.idhorario = ? ORDER BY fechapelicula");
+			          ->prepare("SELECT * FROM horario WHERE idhorario = ?");
 			          
+
 			$stm->execute(array($id));
 			return $stm->fetch(PDO::FETCH_OBJ);
 		}
@@ -125,51 +80,24 @@ class Horario
 			die($e->getMessage());
 		}
 	}
-	
-	public function CambiarEstadoHorario($nuevo_estado, $id)
-	{
-		try 
-		{
-			$sql = "UPDATE horario SET 
-						estado    = ?
-				    WHERE idhorario = ?";
 
-			$this->pdo->prepare($sql)
-			     ->execute(
-				    array(
-                        $nuevo_estado,
-                        $id
-					)
-				);
-		}
-        catch (Throwable $t)//php7
-        {
-			die($t->getMessage());
-        }
-		catch(Exception $e)//php5
-		{
-			die($e->getMessage());
-		}
-	}
 
 	public function ActualizarHorario($data)
 	{
 		try 
 		{
 			$sql = "UPDATE horario SET 
-						fechapelicula = ?, 
-						horapelicula  = ?,
-                        idpelicula    = ?,
-                        idsala        = ?
+						hora_salida = ?, 
+						hora_meta  = ?,
+                        idruta     = ?
 				    WHERE idhorario   = ?";
 
 			$this->pdo->prepare($sql)
 			     ->execute(
 				    array(
-                        $data->fechapelicula, 
-                        $data->horapelicula,
-						$data->idpelicula,
-						$data->idsala,
+                        $data->hora_salida, 
+                        $data->hora_meta,
+						$data->idruta,
                         $data->idhorario
 					)
 				);
@@ -188,16 +116,15 @@ class Horario
 	{
 		try 
 		{
-		$sql = "INSERT INTO horario (fechapelicula, horapelicula, idpelicula, idsala) 
-		        VALUES (?, ?, ?, ?)";
+		$sql = "INSERT INTO horario (hora_salida, hora_meta, idruta) 
+		        VALUES (?, ?, ?)";
 
 		$this->pdo->prepare($sql)
 		     ->execute(
 				array(
-					$data->fechapelicula, 
-					$data->horapelicula,
-					$data->idpelicula,
-					$data->idsala
+					$data->hora_salida, 
+					$data->hora_meta,
+					$data->idruta
                 )
 			);
 		}

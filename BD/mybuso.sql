@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-11-2019 a las 04:00:47
+-- Tiempo de generación: 15-11-2019 a las 22:49:36
 -- Versión del servidor: 10.4.6-MariaDB
 -- Versión de PHP: 7.1.32
 
@@ -69,7 +69,10 @@ CREATE TABLE `ruta` (
 --
 
 INSERT INTO `ruta` (`idruta`, `numero_ruta`, `nombre_bus`, `tarifa`, `idterminal`, `terminal_destino`) VALUES
-(2, '255', 'Wendy', '25 centavos', 2, '4');
+(4, '144', 'anastacia', '60 centavos', 4, 'terminal oriente'),
+(5, '144', 'Ezequiel', '2 dolares', 6, 'La union'),
+(6, '133', 'Lian', '75 centavos', 2, 'Zacatecoluca'),
+(7, '185', 'Jairo', '1 dolar', 5, 'La paz');
 
 -- --------------------------------------------------------
 
@@ -87,10 +90,10 @@ CREATE TABLE `terminal` (
 --
 
 INSERT INTO `terminal` (`idterminal`, `nombre_terminal`) VALUES
-(1, 'zacatecolucaaaa'),
 (2, 'Terminal del Sur (San Salvador)'),
 (3, 'terminar de zacatecoluca'),
-(4, 'dayanita');
+(5, 'Terminal de oriente'),
+(6, 'Terminal del norte');
 
 -- --------------------------------------------------------
 
@@ -169,13 +172,13 @@ ALTER TABLE `horario`
 -- AUTO_INCREMENT de la tabla `ruta`
 --
 ALTER TABLE `ruta`
-  MODIFY `idruta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idruta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `terminal`
 --
 ALTER TABLE `terminal`
-  MODIFY `idterminal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idterminal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
