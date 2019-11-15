@@ -8,7 +8,7 @@ class Ruta
     public $nombre_bus;
     public $tarifa;
     public $idterminal;
-  
+    public $terminal_destino;
 
 	public function __CONSTRUCT()
 	{
@@ -28,12 +28,12 @@ class Ruta
 
 
 
-	public function ObtenerButaca($id)
+	public function ObtenerRuta($id)
 	{
 		try 
 		{
 			$stm = $this->pdo
-			          ->prepare("SELECT * FROM butaca WHERE idbutaca = ?");
+			          ->prepare("SELECT * FROM ruta WHERE idruta = ?");
 			          
 
 			$stm->execute(array($id));
@@ -62,19 +62,29 @@ class Ruta
 		}
 	}
 
-	public function CambiarEstadobutaca($nuevo_estado, $id)
+	
+
+	public function ActualizarRuta($data)
 	{
 		try 
 		{
-			$sql = "UPDATE butaca SET 
-						estado      = ?
-				    WHERE idbutaca  = ?";
+			$sql = "UPDATE ruta SET 
+						numero_ruta = ?, 
+						nombre_bus  = ?,
+                        tarifa  = ?,
+                        idterminal = ?,
+                        terminal_destino = ?
+				    WHERE idruta = ?";
 
 			$this->pdo->prepare($sql)
 			     ->execute(
 				    array(
-                        $nuevo_estado,
-                        $id
+                    $data->numero_ruta, 
+                    $data->nombre_bus,
+                    $data->tarifa,  
+                    $data->idterminal, 
+                    $data->terminal_destino, 
+                    $data->idruta
 					)
 				);
 		}
@@ -88,46 +98,22 @@ class Ruta
 		}
 	}
 
-	public function ActualizarButaca($data)
+	public function RegistrarRuta($data)
 	{
 		try 
 		{
-			$sql = "UPDATE butaca SET 
-						nombre = ?, 
-						idsala  = ?
-				    WHERE idbutaca = ?";
-
-			$this->pdo->prepare($sql)
-			     ->execute(
-				    array(
-                        $data->nombre, 
-                        $data->idsala,
-                        $data->idbutaca
-					)
-				);
-		}
-        catch (Throwable $t)//php7
-        {
-			die($t->getMessage());
-        }
-		catch(Exception $e)//php5
-		{
-			die($e->getMessage());
-		}
-	}
-
-	public function RegistrarButaca($data)
-	{
-		try 
-		{
-		$sql = "INSERT INTO butaca (nombre, idsala) 
-		        VALUES (?, ?)";
+		$sql = "INSERT INTO ruta (numero_ruta, nombre_bus, tarifa, idterminal, terminal_destino) 
+		        VALUES (?, ?, ?, ?, ? )";
 
 		$this->pdo->prepare($sql)
 		     ->execute(
 				array(                
-                    $data->nombre, 
-                    $data->idsala
+                    $data->numero_ruta, 
+                    $data->nombre_bus,
+                    $data->tarifa,  
+                    $data->idterminal, 
+                    $data->terminal_destino
+                   
                 )
 			);
 		}

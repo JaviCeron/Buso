@@ -73,7 +73,7 @@ class Terminal
 			     ->execute(
 				    array(
                         $data->nombre_terminal,
-                        $data->idbutaca
+                        $data->idterminal
 					)
 				);
 		}
@@ -87,6 +87,40 @@ class Terminal
 		}
 	}
 
+	public function ListarTerminall()
+	{
+		try
+		{
+
+			$stm = $this->pdo->prepare("SELECT idterminal, nombre_terminal FROM terminal");
+			$stm->execute();
+
+			return $stm->fetchAll(PDO::FETCH_OBJ);
+		}
+		catch(Exception $e)
+		{
+			die($e->getMessage());
+		}
+	}
+	public function ListarTerminal()
+	{
+		try
+		{
+
+			$stm = $this->pdo->prepare("SELECT * FROM terminal");
+			$stm->execute();
+
+			return $stm->fetchAll(PDO::FETCH_OBJ);
+		}
+        catch (Throwable $t)//php7
+        {
+			die($t->getMessage());
+        }
+		catch(Exception $e)//php5
+		{
+			die($e->getMessage());
+		}
+	}
 	public function RegistrarTerminal($data)
 	{
 		try 
