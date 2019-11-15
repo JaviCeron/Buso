@@ -74,12 +74,12 @@ public class Recyclerview_terminales extends AppCompatActivity {
                         JSONObject terminalObject1 = jsonArray.getJSONObject(i);
 
                         //String nombre = terminalObject1.getString("nombre");
-                        String terminal_salida = terminalObject1.getString("terminal_salida");
-                        Terminal objeto =new Terminal(terminal_salida);
+                        String nombre_terminal = terminalObject1.getString("nombre_terminal");
+                        Terminal objeto =new Terminal();//aqui esta la bronca
                         terminalList.add(objeto);
 
                         terminalList.add(new Terminal(
-                            terminalObject1.getString("terminal_salida")));
+                            terminalObject1.getString("nombre_terminal")));
                     }
                        adapter = new TerminalesAdapter(Recyclerview_terminales.this, terminalList);
                         rvTerminales.setAdapter(adapter);

@@ -11,7 +11,7 @@ public class Terminal implements Serializable {
         this.nombreTerminal = nombreTerminal;
     }
 
-    public Terminal(String terminal_salida){
+    public Terminal(String nombre_terminal){
 
     }
 
