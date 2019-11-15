@@ -13,20 +13,20 @@
               <table class="striped">
                 <thead>
                     <tr>
-                        <th class="center">Id</th>
-                        <th class="center" >Nombres</th>
+                        <th>Id</th>
+                        <th>Nombres</th>
                     
-                        <th class="center">Editar</th>
+                        <th>Editar</th>
                 
                     </tr>
                 </thead>
                 <tbody>
                 <?php foreach($this->model->ListarTerminal() as $r): ?>
                     <tr>
-                        <td class="center"><?php echo $r->idterminal; ?></td>
-                        <td class="center"><?php echo $r->nombre_terminal; ?></td>
+                        <td><?php echo $r->idterminal; ?></td>
+                        <td><?php echo $r->nombre_terminal; ?></td>
                        
-                        <td class="center">
+                        <td>
                             <!-- en la url pasamos parámetros para el controlador -->
                             <!--    controller, metod,id -->
                             <a href="?c=Terminal&a=Crud&id=<?php echo $r->idterminal; ?>" title="Editar Terminal" ><i class="small material-icons">edit</i></a>
