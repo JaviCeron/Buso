@@ -29,7 +29,7 @@ class Terminal
 		try 
 		{
 			$stm = $this->pdo
-			            ->prepare("DELETE FROM empleados WHERE idempleado = ?");			          
+			            ->prepare("DELETE FROM terminal WHERE idterminal = ?");			          
 
 			$stm->execute(array($id));
 		} catch (Exception $e) 

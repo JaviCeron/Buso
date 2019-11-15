@@ -24,6 +24,10 @@ class TerminalController{
         require_once 'view/include/pie.php';
     }
     
+    public function EliminarTerminal(){
+        $this->model->EliminarTerminal($_REQUEST['id']);
+        header('Location: index.php?c=Terminal&a=Consultar');
+    }
     public function Consultar(){
         //llama todas las partes de la vista principal
         require_once 'view/include/cabecera_usuario.php';

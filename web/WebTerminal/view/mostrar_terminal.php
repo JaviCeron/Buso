@@ -17,6 +17,7 @@
                         <th>Nombres</th>
                     
                         <th>Editar</th>
+                        <th>Eliminar</th>
                 
                     </tr>
                 </thead>
@@ -30,6 +31,10 @@
                             <!-- en la url pasamos parámetros para el controlador -->
                             <!--    controller, metod,id -->
                             <a href="?c=Terminal&a=Crud&id=<?php echo $r->idterminal; ?>" title="Editar Terminal" ><i class="small material-icons">edit</i></a>
+                        </td>
+
+                        <td>
+                            <a onclick="javascript:return confirm('¿Seguro que desea eliminar esta terminal?');" href="?c=Terminal&a=EliminarTerminal&id=<?php echo $r->idterminal; ?>" title="Eliminar Registro" ><i class="small material-icons red-text">delete</i></a>
                         </td>
                      
                     </tr>
