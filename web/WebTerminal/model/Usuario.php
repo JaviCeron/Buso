@@ -48,12 +48,12 @@ class Usuario
 		}
 	}
 
-	public function ListarUsuarioActivos()
+	public function ListarUsuario()
 	{
 		try
 		{
 
-			$stm = $this->pdo->prepare("SELECT idusuario, nombre, apellido, email FROM usuario WHERE estado = 1");
+			$stm = $this->pdo->prepare("SELECT* FROM usuario");
 			$stm->execute();
 
 			return $stm->fetchAll(PDO::FETCH_OBJ);
@@ -68,25 +68,7 @@ class Usuario
 		}
 	}
 
-	public function ListarUsuarioInactivos()
-	{
-		try
-		{
-
-			$stm = $this->pdo->prepare("SELECT idusuario, nombre, apellido, email FROM usuario WHERE estado = 0");
-			$stm->execute();
-
-			return $stm->fetchAll(PDO::FETCH_OBJ);
-		}
-        catch (Throwable $t)//php7
-        {
-			die($t->getMessage());
-        }
-		catch(Exception $e)//php5
-		{
-			die($e->getMessage());
-		}
-	}
+	
 
 	public function ObtenerUsuario($id)
 	{
@@ -110,31 +92,7 @@ class Usuario
 	}
 	
 
-	public function CambiarEstadoUsuario($nuevo_estado, $id)
-	{
-		try 
-		{
-			$sql = "UPDATE usuario SET 
-						estado      = ?
-				    WHERE idusuario = ?";
-
-			$this->pdo->prepare($sql)
-			     ->execute(
-				    array(
-                        $nuevo_estado,
-                        $id
-					)
-				);
-		}
-        catch (Throwable $t)//php7
-        {
-			die($t->getMessage());
-        }
-		catch(Exception $e)//php5
-		{
-			die($e->getMessage());
-		}
-	}
+	
 
 	public function ActualizarUsuario($data)
 	{
