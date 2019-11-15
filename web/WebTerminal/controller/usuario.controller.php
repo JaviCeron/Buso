@@ -53,9 +53,12 @@ class UsuarioController{
         $usuario->idusuario = $_REQUEST['txtIdusuario'];
         $usuario->nombre = $_REQUEST['txtNombre'];
         $usuario->apellido = $_REQUEST['txtApellido'];
+        $usuario->sexo = $_REQUEST['selSexo'];
         $usuario->email = $_REQUEST['txtEmail'];
         $usuario->clave = $_REQUEST['txtContrasena1'];
-       
+        $usuario->idpreguntasecreta = $_REQUEST['selPregunta'];
+        $usuario->respuestasecreta = $_REQUEST['txtRespuesta1'];
+
         //si el id es mayor que cero Actualiza si no registra
         $usuario->idusuario > 0 
             ? $this->model->ActualizarUsuario($usuario)

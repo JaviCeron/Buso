@@ -21,7 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `mybuso`
 --
-
+CREATE DATABASE `mybuso`;
+USE `mybuso`;
 -- --------------------------------------------------------
 
 --

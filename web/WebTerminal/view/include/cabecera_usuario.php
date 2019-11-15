@@ -33,7 +33,7 @@
     <li><a href="?c=Ruta&a=Crud">Ruta</a></li>
     <li class="divider"></li>
     <li><a href="?c=Pelicula&a=Crud">Horario</a></li>
-    <li><a href="?c=Horario&a=Crud">Usuario</a></li>
+    <li><a href="?c=Usuario&a=Crud">Usuario</a></li>
     <li class="divider"></li>
   
     
@@ -47,7 +47,7 @@
     <li><a href="?c=Ruta&a=Consultar">Ruta</a></li>
     <li class="divider"></li>
     <li><a href="?c=Pelicula&a=Consultar">Horario</a></li>
-    <li><a href="?c=Horario&a=Consultar">Usuario</a></li>
+    <li><a href="?c=Usuario&a=Consultar">Usuario</a></li>
     <li class="divider"></li>
    
   </ul>
@@ -67,7 +67,7 @@
     <li><a href="?c=Ruta&a=Crud">Ruta</a></li>
     <li class="divider"></li>
     <li><a href="?c=Pelicula&a=Crud">Horario</a></li>
-    <li><a href="?c=Horario&a=Crud">Usuarios</a></li>
+    <li><a href="?c=Usuario&a=Crud">Usuarios</a></li>
 
     <li class="divider"></li>
    
@@ -80,7 +80,7 @@
     <li><a href="?c=Ruta&a=Consultar">Ruta</a></li>
     <li class="divider"></li>
     <li><a href="?c=Pelicula&a=Consultar">Horario</a></li>
-    <li><a href="?c=Horario&a=Consultar">Usuarios</a></li>
+    <li><a href="?c=Usuario&a=Consultar">Usuarios</a></li>
     <li class="divider"></li>
   
 
