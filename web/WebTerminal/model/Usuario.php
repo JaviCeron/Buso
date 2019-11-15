@@ -9,7 +9,6 @@ class Usuario
     public $email;
     public $clave;
    
-
 	public function __CONSTRUCT()
 	{
 		try
@@ -31,7 +30,7 @@ class Usuario
 		try 
 		{
 			$stm = $this->pdo
-			          ->prepare("SELECT * FROM usuario WHERE email = ? AND clave = MD5(?)");
+			          ->prepare("SELECT * FROM usuario WHERE email = ? AND clave = MD5(?) ");
 			          
 
 			$stm->execute(array($email, $clave));
@@ -48,8 +47,27 @@ class Usuario
 		}
 	}
 
+	public function ListarUsuario()
+	{
+		try
+		{
 
+			$stm = $this->pdo->prepare("SELECT* FROM usuario");
+			$stm->execute();
 
+			return $stm->fetchAll(PDO::FETCH_OBJ);
+		}
+        catch (Throwable $t)//php7
+        {
+			die($t->getMessage());
+        }
+		catch(Exception $e)//php5
+		{
+			die($e->getMessage());
+		}
+	}
+
+	
 
 	public function ObtenerUsuario($id)
 	{
@@ -73,6 +91,7 @@ class Usuario
 	}
 	
 
+	
 
 	public function ActualizarUsuario($data)
 	{

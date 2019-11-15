@@ -32,8 +32,11 @@
     <li><a href="?c=Terminal&a=Crud">Terminal</a></li>
     <li><a href="?c=Ruta&a=Crud">Ruta</a></li>
     <li class="divider"></li>
+
     <li><a href="?c=Horario&a=Crud">Horario</a></li>
-    <li><a href="?c=Horario&a=Crud">Usuario</a></li>
+    <li><a href="?c=Usuario&a=Crud">Usuario</a></li>
+
+
     <li class="divider"></li>
   
     
@@ -46,8 +49,8 @@
     <li><a href="?c=Terminal&a=Consultar">Terminal</a></li>
     <li><a href="?c=Ruta&a=Consultar">Ruta</a></li>
     <li class="divider"></li>
-    <li><a href="?c=Pelicula&a=Consultar">Horario</a></li>
-    <li><a href="?c=Horario&a=Consultar">Usuario</a></li>
+    <li><a href="?c=Horario&a=Consultar">Horario</a></li>
+    <li><a href="?c=Usuario&a=Consultar">Usuario</a></li>
     <li class="divider"></li>
    
   </ul>
@@ -66,8 +69,9 @@
     <li><a href="?c=Terminal&a=Crud">Terminal</a></li>
     <li><a href="?c=Ruta&a=Crud">Ruta</a></li>
     <li class="divider"></li>
+
     <li><a href="?c=Horario&a=Crud">Horario</a></li>
-    <li><a href="">Usuarios</a></li>
+    <li><a href="?c=Usuario&a=Crud">Usuarios</a></li>
 
     <li class="divider"></li>
    
@@ -79,8 +83,8 @@
     <li><a href="?c=Terminal&a=Consultar">Terminal</a></li>
     <li><a href="?c=Ruta&a=Consultar">Ruta</a></li>
     <li class="divider"></li>
-    <li><a href="?c=Pelicula&a=Consultar">Horario</a></li>
-    <li><a href="?c=Horario&a=Consultar">Usuarios</a></li>
+    <li><a href="?c=Horario&a=Consultar">Horario</a></li>
+    <li><a href="?c=Usuario&a=Consultar">Usuarios</a></li>
     <li class="divider"></li>
   
 
@@ -103,9 +107,9 @@
       <ul id="nav-mobile" class="sidenav grey darken-2">
         <li><a href="?c=Principal&a=Index" title="Inicio"><i class="material-icons white-text">home</i></a></li>
         <!-- para el menú registro -->
-        <li><a class="dropdown-trigger white-text" href="#!" data-target="registro-m">Terminal<i class="material-icons right white-text">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-trigger white-text" href="#!" data-target="registro-m">Registrar<i class="material-icons right white-text">arrow_drop_down</i></a></li>
         <!-- para el menú cosulta -->
-        <li><a class="dropdown-trigger white-text" href="#!" data-target="consulta-m">Bus<i class="material-icons right white-text">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-trigger white-text" href="#!" data-target="consulta-m">Consultar<i class="material-icons right white-text">arrow_drop_down</i></a></li>
        
         
        

@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Buso</string>
-    <string name="URL">http://buso.000webhostapp.com/buso/listar_terminal.php</string>
+    <string name="URL">http://172.20.10.2/buso/listar_terminal.php</string>
 </resources>
