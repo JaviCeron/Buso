@@ -3,7 +3,7 @@
     package="com.example.buso">
 
     <uses-permission-sdk-23 android:name="android.permission.INTERNET"></uses-permission-sdk-23>
-    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="Q"></uses-sdk>
+
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
     <application
