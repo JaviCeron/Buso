@@ -43,7 +43,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="1dp"
                 android:layout_toRightOf="@id/imageView"
-                android:text="13.3 Inch, 256 GB"
+                android:hint="13.3 Inch, 256 GB"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
             <TextView
                 android:id="@+id/textViewDescripcion"
@@ -56,9 +56,10 @@
                 android:background="@color/colorPrimary"
                 android:paddingLeft="0dp"
                 android:paddingRight="15dp"
-                android:text="Descripción"
+                android:text="hora de Salida"
+                android:textColor="#000"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
-                android:textStyle="bold" />
+                 />
             <TextView
                 android:id="@+id/textViewDescripcion1"
                 android:layout_width="match_parent"
@@ -67,7 +68,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="1dp"
                 android:layout_toRightOf="@id/imageView"
-                android:text="INR 56990"
+                android:hint="INR 56990"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textStyle="bold" />
             <TextView
@@ -77,18 +78,19 @@
                 android:layout_below="@id/textViewDescripcion1"
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/imageView"
-                android:text="Precio: "
+                android:text="Hora de Llegada: "
+                android:background="@color/colorPrimary"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                 android:textColor="#000000" />
             <TextView
-                android:id="@+id/textViewPrecio1"
+                android:id="@+id/yvLlegada"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textViewPrecio"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="1dp"
                 android:layout_toRightOf="@id/imageView"
-                android:text="13.3 Inch, 256 GB"
+                android:hint="13.3 Inch, 256 GB"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
 
 
