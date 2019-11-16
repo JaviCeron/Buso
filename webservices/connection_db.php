@@ -9,9 +9,9 @@ function conexion(){
 
 	$conn = null;
 	$host = 'localhost';
-	$db = 'buso';
-	$user = 'root';
-	$pwd = '';
+	$db = 'id11536326_mybuso';
+	$user = 'id11536326_root';
+	$pwd = 'busobuso';
 	
 try{
 	$conn = new PDO('mysql:host='.$host.'; dbname='.$db,$user,$pwd,array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''));  //Me pase a esta conexión por problemas de acentos, letra ñ y otros.

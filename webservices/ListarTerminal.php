@@ -3,9 +3,9 @@
 	
 	//database constants
 	define('DB_HOST', 'localhost');
-	define('DB_USER', 'root');
-	define('DB_PASS', '');
-	define('DB_NAME', 'mybuso');
+	define('DB_USER', 'id11536326_root');
+	define('DB_PASS', 'busobuso');
+	define('DB_NAME', 'id11536326_mybuso');
 	
 	//connecting to database and getting the connection object
 	$conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);

@@ -96,7 +96,7 @@ public class Recyclerview_terminales extends AppCompatActivity {
 
                                 terminalesList.add(new Terminal(
                                         terminalesObject.getInt("idterminal"),
-                                        terminalesObject.getString("nombre")
+                                        terminalesObject.getString("nombre_terminal")
                                 ));
                             }
 
