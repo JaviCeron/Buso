@@ -10,19 +10,20 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.buso.Entidades.Terminales;
 
 import java.util.List;
 
 //import android.support.v7.widget.RecyclerView;
 
 
-public class TerminalAdapter extends RecyclerView.Adapter<ProductsAdapter.ProductViewHolder> {
+public class TerminalAdapter extends RecyclerView.Adapter<TerminalAdapter.ProductViewHolder> {
 
 
     private Context mCtx;
-    private List<Productos> productList;
+    private List<Terminales> productList;
 
-    public TerminalAdapter(Context mCtx, List<Productos> productList) {
+    public TerminalAdapter(Context mCtx, List<Terminales> productList) {
         this.mCtx = mCtx;
         this.productList = productList;
     }
@@ -36,29 +37,11 @@ public class TerminalAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
 
     @Override
     public void onBindViewHolder(ProductViewHolder holder, int position) {
-        Productos product = productList.get(position);
+        Terminales product = productList.get(position);
 
-        //loading the image
+            holder.textViewCodigo1.setText(String.valueOf(product.getIdterminal()));
+            holder.textViewDescripcion1.setText(product.getNombre_terminal());
 
-        String im = product.getImagen();
-        //Toast.makeText(mCtx, ""+im, Toast.LENGTH_SHORT).show();
-
-
-        if(im.isEmpty()) {
-            holder.imageView.setImageResource(R.drawable.imgnoencontrada);
-            holder.textViewCodigo1.setText(String.valueOf(product.getCodigo()));
-            holder.textViewDescripcion1.setText(product.getDescripcion());
-            holder.textViewPrecio1.setText(String.valueOf(product.getPrecio()));
-
-        }else{
-            Glide.with(mCtx)
-                    .load(product.getImagen())
-                    .into(holder.imageView);
-
-            holder.textViewCodigo1.setText(String.valueOf(product.getCodigo()));
-            holder.textViewDescripcion1.setText(product.getDescripcion());
-            holder.textViewPrecio1.setText(String.valueOf(product.getPrecio()));
-        }
 
     }
 
@@ -70,15 +53,11 @@ public class TerminalAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
     public static class ProductViewHolder extends RecyclerView.ViewHolder {
 
         TextView textViewCodigo1, textViewDescripcion1, textViewPrecio1;
-        ImageView imageView;
-
         public ProductViewHolder(View itemView) {
             super(itemView);
 
-            textViewCodigo1 = itemView.findViewById(R.id.textViewCodigo1);
-            textViewDescripcion1 = itemView.findViewById(R.id.textViewDescripcion1);
-            textViewPrecio1= itemView.findViewById(R.id.textViewPrecio1);
-            imageView = itemView.findViewById(R.id.imageView);
+            textViewCodigo1 = itemView.findViewById(R.id.textViewId1);
+            textViewDescripcion1 = itemView.findViewById(R.id.textViewnombre1);
         }
     }
 
