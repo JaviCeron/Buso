@@ -19,6 +19,7 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.example.buso.Entidades.Terminales;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,9 +31,9 @@ import java.util.List;
 
 public class ListadoTerminales extends AppCompatActivity {
 
-    private static final String URL = Config.urlConsultaApiMySQLi;
+    private static final String URL = Conf.listarTerminal;
 
-    List<Productos> productosList;
+    List<Terminales> productosList;
     RecyclerView recyclerView;
 
     ProductsAdapter adapter;
@@ -65,25 +66,7 @@ public class ListadoTerminales extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_consulta__recycler_view);
-
-        Toolbar toolbar = findViewById(R.id.toolbar1);
-        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_back));
-        toolbar.setTitleTextColor(getResources().getColor(R.color.mycolor1));
-        toolbar.setTitleMargin(0, 0, 0, 0);
-        toolbar.setSubtitle("Consulta de Artículos");
-        toolbar.setSubtitleTextColor(getResources().getColor(R.color.white));
-        toolbar.setTitle("Javi Cerón");
-        setSupportActionBar(toolbar);
-
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DialogConfirmacion();
-            }
-        });
-
-
+        setContentView(R.layout.activity_listado__terminales);
 
         ///y esto para pantalla completa (oculta incluso la barra de estado)
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -107,7 +90,7 @@ public class ListadoTerminales extends AppCompatActivity {
                         try {
                             JSONArray array = new JSONArray(response);
                             int totalEncontrados = array.length();
-                            Toast.makeText(Consulta_RecyclerView.this, "Total: "+totalEncontrados, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ListadoTerminales.this, "Total: "+totalEncontrados, Toast.LENGTH_SHORT).show();
 
                             for (int i = 0; i < array.length(); i++) {
 
@@ -131,16 +114,16 @@ public class ListadoTerminales extends AppCompatActivity {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(Consulta_RecyclerView.this, "Error. Compruebe su acceso a Internet.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ListadoTerminales.this, "Error. Compruebe su acceso a Internet.", Toast.LENGTH_SHORT).show();
             }
         });
-        MySingleton.getInstance(Consulta_RecyclerView.this).addToRequestQueue(stringRequest);
+        MySingleton.getInstance(ListadoTerminales.this).addToRequestQueue(stringRequest);
     }
 
 
     private void DialogConfirmacion(){
         String mensaje = "¿Realmente desea salir?";
-        dialogo = new AlertDialog.Builder(Consulta_RecyclerView.this);
+        dialogo = new AlertDialog.Builder(ListadoTerminales.this);
         dialogo.setIcon(R.drawable.ic_close);
         dialogo.setTitle("Advertencia");
         dialogo.setMessage(mensaje);
@@ -157,27 +140,5 @@ public class ListadoTerminales extends AppCompatActivity {
         });
         dialogo.show();
     }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_recycler_view, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-       if(id == R.id.action_salir){
-            DialogConfirmacion();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-
-
-
 
 }
