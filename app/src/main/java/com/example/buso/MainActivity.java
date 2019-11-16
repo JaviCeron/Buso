@@ -7,8 +7,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+
+    Button btnListar;
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -36,13 +39,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        btnListar = findViewById(R.id.btnVerTerminales);
+
     }
 
     public void onClick(View view) {
         Intent miIntent=null;
         switch (view.getId()){
             case R.id.btnVerTerminales:
-                miIntent=new Intent(MainActivity.this,ListadoTerminales.class);
+                miIntent=new Intent(MainActivity.this,Consulta_RecyclerView.class);
                 break;
         }
         if (miIntent!=null){
