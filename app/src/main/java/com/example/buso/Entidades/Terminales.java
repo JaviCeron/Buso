@@ -3,30 +3,30 @@ package com.example.buso.Entidades;
 import java.io.Serializable;
 
 public class Terminales implements Serializable {
-    Integer idterminal;
-    String nombre_terminal;
+    int idterminal;
+    String nombre;
 
     public Terminales() {
     }
 
-    public Terminales(Integer idterminal, String nombre_terminal) {
+    public Terminales(int idterminal, String nombre) {
         this.idterminal = idterminal;
-        this.nombre_terminal = nombre_terminal;
+        this.nombre = nombre;
     }
 
-    public Integer getIdterminal() {
+    public int getIdterminal() {
         return idterminal;
     }
 
-    public void setIdterminal(Integer idterminal) {
+    public void setIdterminal(int idterminal) {
         this.idterminal = idterminal;
     }
 
-    public String getNombre_terminal() {
-        return nombre_terminal;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNombre_terminal(String nombre_terminal) {
-        this.nombre_terminal = nombre_terminal;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 }
