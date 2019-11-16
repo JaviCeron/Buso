@@ -46,6 +46,7 @@ class Ruta
 			die($e->getMessage());
 		}
 	}
+	
 	public function ObtenerRuta($id)
 	{
 		try 

@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         Intent miIntent=null;
         switch (view.getId()){
             case R.id.btnVerTerminales:
-                miIntent=new Intent(MainActivity.this,Consulta_RecyclerView.class);
+                miIntent=new Intent(MainActivity.this,Consulta_RecyclerViewTerminal.class);
                 break;
         }
         if (miIntent!=null){

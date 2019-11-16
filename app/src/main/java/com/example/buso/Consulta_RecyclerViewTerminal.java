@@ -114,7 +114,7 @@ public class Consulta_RecyclerViewTerminal extends AppCompatActivity {
                 Toast.makeText(Consulta_RecyclerViewTerminal.this, "Error. Compruebe su acceso a Internet.", Toast.LENGTH_SHORT).show();
             }
         });
-        MySingleton.getInstance(Consulta_RecyclerViewTerminal.this).addToRequestQueue(stringRequest);
+        //MySingleton.getInstance(Consulta_RecyclerViewTerminal.this).addToRequestQueue(stringRequest);
     }
 
 
@@ -139,22 +139,6 @@ public class Consulta_RecyclerViewTerminal extends AppCompatActivity {
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_recycler_view, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-       if(id == R.id.action_salir){
-            DialogConfirmacion();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
 
 
