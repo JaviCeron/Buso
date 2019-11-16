@@ -25,69 +25,47 @@
 
 
         <TextView
-            android:id="@+id/textViewCodigo"
+            android:id="@+id/textViewId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:text="Código: "
+            android:text="Id: "
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-            android:textColor="#000000" />
+            android:textColor="#000" />
 
         <TextView
-            android:id="@+id/textViewCodigo1"
+            android:id="@+id/textViewId1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textViewCodigo"
+            android:layout_below="@id/textViewId"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="1dp"
-            android:text="13.3 Inch, 256 GB"
+            android:text="1"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
 
         <TextView
-            android:id="@+id/textViewDescripcion"
+            android:id="@+id/textViewnombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textViewCodigo1"
+            android:layout_below="@id/textViewId1"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="1dp"
-            android:background="@color/colorPrimary"
             android:paddingLeft="0dp"
+            android:textColor="#000"
             android:paddingRight="15dp"
-            android:text="Descripción"
+            android:text="Nombre"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textViewDescripcion1"
+            android:id="@+id/textViewnombre1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textViewDescripcion"
+            android:layout_below="@id/textViewnombre"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="1dp"
-            android:text="INR 56990"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textViewPrecio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/textViewDescripcion1"
-            android:layout_marginLeft="5dp"
-            android:text="Precio: "
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/textViewPrecio1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/textViewPrecio"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="1dp"
-            android:layout_toRightOf="@id/imageView"
-            android:text="13.3 Inch, 256 GB"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+            android:text="San Vicente"
+             />
 
 
 
