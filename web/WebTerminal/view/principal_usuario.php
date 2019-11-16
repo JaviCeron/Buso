@@ -8,7 +8,7 @@
       <h2 class="header center grey-text text-darken-2">Bienvenid@</h2>
       <h3 class="header center grey-text text-darken-2"><?php echo $_SESSION["nombre"]." ".$_SESSION["apellido"]; ?></h3>
       <br>
-      <img width="1000px" height="275px" src="view/include/images/bus.png" class="center">
+      <img width="1000px" height="275px" src="view/include/images/bus.png" class="responsive-img">
     </div>
       </div>
     </div>
