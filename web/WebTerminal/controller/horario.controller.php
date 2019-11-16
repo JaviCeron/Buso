@@ -56,7 +56,7 @@ class HorarioController{
         $horario->idhorario = $_REQUEST['txtIdhorario'];
         $horario->hora_salida = $_REQUEST['txthora_salida'];
         $horario->hora_meta = $_REQUEST['txthora_meta'];
-        $horario->idruta = $_REQUEST['selSala'];
+        $horario->idruta = $_REQUEST['selidruta'];
 
         //si el id es mayor que cero Actualiza si no registra
         $horario->idhorario > 0 

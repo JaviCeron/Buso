@@ -1,6 +1,6 @@
 <?php 
-  require_once 'model/Horario.php';
-  $horario = new Horario();
+  require_once 'model/Ruta.php';
+  $ruta= new Ruta();
 ?>
 
 <!-- cuerpo de registrar_usuario -->
@@ -23,12 +23,12 @@
                   <input type="hidden" name="txtIdhorario" value="<?php echo $horario->idhorario; ?>" />
 
                   <div class="input-field col s6">
-                    <input id="txthora_salida" type="time" class="validate" name="txthora_salida" value="<?php echo $horario->hora_salida; ?>"  required>
+                    <input id="txthora_salida" type="text" class="validate" name="txthora_salida" value="<?php echo $horario->hora_salida; ?>"  required>
                     <label for="txthora_salida">Hora de salida</label>
                   </div>
 
                   <div class="input-field col s6">
-                    <input id="txthora_meta" type="time" class="validate" name="txthora_meta" value="<?php echo $horario->hora_meta; ?>"  required>
+                    <input id="txthora_meta" type="text" class="validate" name="txthora_meta" value="<?php echo $horario->hora_meta; ?>"  required>
                     <label for="txthora_meta">Hora meta</label>
                   </div>
 

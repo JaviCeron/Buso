@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-11-2019 a las 22:49:36
+-- Tiempo de generación: 16-11-2019 a las 23:54:15
 -- Versión del servidor: 10.4.6-MariaDB
 -- Versión de PHP: 7.1.32
 
@@ -21,8 +21,7 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `mybuso`
 --
-CREATE DATABASE `mybuso`;
-USE `mybuso`;
+
 -- --------------------------------------------------------
 
 --
@@ -45,10 +44,17 @@ CREATE TABLE `cliente` (
 
 CREATE TABLE `horario` (
   `idhorario` int(11) NOT NULL,
-  `hora_salida` time NOT NULL,
-  `hora_meta` time NOT NULL,
+  `hora_salida` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `hora_meta` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
   `idruta` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `horario`
+--
+
+INSERT INTO `horario` (`idhorario`, `hora_salida`, `hora_meta`, `idruta`) VALUES
+(1, '4:30 pm', '8:00 pm', 7);
 
 -- --------------------------------------------------------
 
@@ -115,7 +121,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`idusuario`, `nombre`, `apellido`, `email`, `clave`) VALUES
-(1, 'wendy', 'alvarez', 'eligrande@gmail.com', '202cb962ac59075b964b07152d234b70');
+(1, 'wendy', 'alvarez', 'dylan@gmail.com', '202cb962ac59075b964b07152d234b70');
 
 --
 -- Índices para tablas volcadas
@@ -167,7 +173,7 @@ ALTER TABLE `cliente`
 -- AUTO_INCREMENT de la tabla `horario`
 --
 ALTER TABLE `horario`
-  MODIFY `idhorario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idhorario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `ruta`
@@ -185,7 +191,7 @@ ALTER TABLE `terminal`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

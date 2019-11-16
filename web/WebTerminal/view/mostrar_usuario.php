@@ -18,6 +18,7 @@
                           <th>Apellido</th>
                           <th>Correo electrónico</th>
                           <th class="center">Editar</th>
+                          <th class="center">Eliminar</th>
                          
                       </tr>
                 </thead>
@@ -33,6 +34,10 @@
                               <!--    controller, metod,id -->
                               <a href="?c=Usuario&a=Update&id=<?php echo $r->idusuario; ?>" title="Editar Registro" ><i class="small material-icons blue-text">edit</i></a>
                           </td>
+
+                          <td class="center">
+                            <a onclick="javascript:return confirm('¿Seguro que desea eliminar esta usuario?');" href="?c=Usuario&a=EliminarUsuario&id=<?php echo $r->idusuario; ?>" title="Eliminar Registro" ><i class="small material-icons red-text">delete</i></a>
+                        </td>
                           
                       </tr>
                   <?php endforeach; ?>

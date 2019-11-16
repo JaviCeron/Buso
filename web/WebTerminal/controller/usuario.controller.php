@@ -121,6 +121,10 @@ class UsuarioController{
         require_once 'view/include/pie.php';
     }
     
+    public function EliminarUsuario(){
+        $this->model->EliminarUsuario($_REQUEST['id']);
+        header('Location: index.php?c=Usuario&a=Consultar');
+    }
     public function ActualizarUsuario(){
         $usuario = new Usuario();
         

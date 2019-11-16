@@ -66,7 +66,19 @@ class Usuario
 			die($e->getMessage());
 		}
 	}
+    public function EliminarUsuario($id)
+	{
+		try 
+		{
+			$stm = $this->pdo
+			            ->prepare("DELETE FROM usuario WHERE idusuario = ?");			          
 
+			$stm->execute(array($id));
+		} catch (Exception $e) 
+		{
+			die($e->getMessage());
+		}
+	}
 	
 
 	public function ObtenerUsuario($id)
