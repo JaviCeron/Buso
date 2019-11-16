@@ -33,34 +33,12 @@ public class ListadoTerminales extends AppCompatActivity {
 
     private static final String URL = Conf.listarTerminal;
 
-    List<Terminales> productosList;
+    List<Terminales> terminalList;
     RecyclerView recyclerView;
 
     TerminalAdapter adapter;
 
     AlertDialog.Builder dialogo;
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            new android.app.AlertDialog.Builder(this)
-                    .setIcon(R.drawable.ic_close)
-                    .setTitle("Advertencia")
-                    .setMessage("¿Realmente desea salir?")
-                    .setNegativeButton(android.R.string.cancel, null)
-                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {//un listener que al pulsar, cierre la aplicacion
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                        }
-                    })
-                    .show();
-            return true;
-        }
-        //para las demas cosas, se reenvia el evento al listener habitual
-        return super.onKeyDown(keyCode, event);
-    }
-
 
 
     @Override
@@ -74,14 +52,14 @@ public class ListadoTerminales extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        productosList = new ArrayList<>();
+        terminalList = new ArrayList<>();
 
-        loadProductos();
+        cargarTerminales();
 
     }
 
 
-    private void loadProductos() {
+    private void cargarTerminales() {
         StringRequest stringRequest = new StringRequest(Request.Method.GET, URL,
                 new Response.Listener<String>() {
                     @Override
@@ -96,13 +74,13 @@ public class ListadoTerminales extends AppCompatActivity {
 
                                 JSONObject terminalesObject = array.getJSONObject(i);
 
-                                productosList.add(new Terminales(
+                                terminalList.add(new Terminales(
                                         terminalesObject.getInt("idterminal"),
                                         terminalesObject.getString("nombre_terminal")
                                 ));
                             }
 
-                            adapter = new TerminalAdapter(ListadoTerminales.this, productosList);
+                            adapter = new TerminalAdapter(ListadoTerminales.this, terminalList);
                             recyclerView.setAdapter(adapter);
 
                         } catch (JSONException e) {
@@ -116,27 +94,6 @@ public class ListadoTerminales extends AppCompatActivity {
             }
         });
         MySingleton.getInstance(ListadoTerminales.this).addToRequestQueue(stringRequest);
-    }
-
-
-    private void DialogConfirmacion(){
-        String mensaje = "¿Realmente desea salir?";
-        dialogo = new AlertDialog.Builder(ListadoTerminales.this);
-        dialogo.setIcon(R.drawable.ic_close);
-        dialogo.setTitle("Advertencia");
-        dialogo.setMessage(mensaje);
-        dialogo.setCancelable(false);
-        dialogo.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialogo, int id) {
-                finish();
-            }
-        });
-        dialogo.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialogo, int id) {
-                Toast.makeText(getApplicationContext(), "Operación Cancelada.", Toast.LENGTH_LONG).show();
-            }
-        });
-        dialogo.show();
     }
 
 }

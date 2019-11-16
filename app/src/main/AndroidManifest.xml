@@ -14,9 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Recyclerview_terminales">
-
-        </activity>
         <activity android:name=".WebAdministrador">
 
         </activity>
@@ -25,6 +22,7 @@
 
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter></activity>
+        <activity android:name=".ListadoTerminales"></activity>
     </application>
 
 </manifest>

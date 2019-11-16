@@ -1,6 +1,8 @@
 package com.example.buso.Entidades;
 
-public class Terminales {
+import java.io.Serializable;
+
+public class Terminales implements Serializable {
     Integer idterminal;
     String nombre_terminal;
 
