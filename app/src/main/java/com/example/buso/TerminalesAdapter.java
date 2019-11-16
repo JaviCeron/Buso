@@ -14,7 +14,7 @@ import com.example.buso.Entidades.Terminal;
 
 import java.util.List;
 
-public class TerminalesAdapter extends RecyclerView.Adapter<TerminalesAdapter.ProductViewHolder> {
+public class TerminalesAdapter extends RecyclerView.Adapter<TerminalesAdapter.TerminalViewHolder> {
     private Context context;
     private List<Terminal> terminalList;
 
@@ -25,14 +25,14 @@ public class TerminalesAdapter extends RecyclerView.Adapter<TerminalesAdapter.Pr
 
     @NonNull
     @Override
-    public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public TerminalViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater =LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.rv_lista_terminales, null);
-        return new ProductViewHolder(view);
+        return new TerminalViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull TerminalViewHolder holder, int position) {
     Terminal terminal =terminalList.get(position);
 
     String ts = terminal.getNombreTerminal();
@@ -48,10 +48,10 @@ public class TerminalesAdapter extends RecyclerView.Adapter<TerminalesAdapter.Pr
         return 0;
     }
 
-    public class ProductViewHolder extends RecyclerView.ViewHolder {
+    public class TerminalViewHolder extends RecyclerView.ViewHolder {
         TextView tvNombreTerminal;
 
-        public ProductViewHolder(@NonNull View itemView) {
+        public TerminalViewHolder(@NonNull View itemView) {
             super(itemView);
 
 
