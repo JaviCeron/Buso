@@ -36,7 +36,7 @@ public class ListadoTerminales extends AppCompatActivity {
     List<Terminales> productosList;
     RecyclerView recyclerView;
 
-    ProductsAdapter adapter;
+    TerminalAdapter adapter;
 
     AlertDialog.Builder dialogo;
 
@@ -94,17 +94,15 @@ public class ListadoTerminales extends AppCompatActivity {
 
                             for (int i = 0; i < array.length(); i++) {
 
-                                JSONObject articulosObject = array.getJSONObject(i);
+                                JSONObject terminalesObject = array.getJSONObject(i);
 
-                                productosList.add(new Productos(
-                                        articulosObject.getInt("codigo"),
-                                        articulosObject.getString("descripcion"),
-                                        articulosObject.getDouble("precio"),
-                                        articulosObject.getString("imagen")
+                                productosList.add(new Terminales(
+                                        terminalesObject.getInt("idterminal"),
+                                        terminalesObject.getString("nombre_terminal")
                                 ));
                             }
 
-                            adapter = new ProductsAdapter(Consulta_RecyclerView.this, productosList);
+                            adapter = new TerminalAdapter(ListadoTerminales.this, productosList);
                             recyclerView.setAdapter(adapter);
 
                         } catch (JSONException e) {
