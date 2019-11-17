@@ -68,10 +68,7 @@ class UsuarioController{
         header('Location: index.php?c=Usuario&a=Consultar');
     }
     
-    public function CambiarEstado(){
-        $this->model->CambiarEstadoUsuario($_REQUEST['nuevo_estado'],$_REQUEST['id']);
-        header('Location: index.php?c=Usuario&a=Consultar');
-    }
+   
     
     public function Update(){
         $usuario = new Usuario();

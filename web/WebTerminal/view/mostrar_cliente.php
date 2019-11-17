@@ -1,52 +1,44 @@
-  <div class="container">
+<div class="container">
     <div class="section">
 
       <!--   Icon Section   -->
       <div class="row">
         <div class="col s12">
-            <h2 class="center grey-text text-darken-4"><i class="medium material-icons">shopping_cart</i> Clientes Registrados</h2>
+            <h2 class="center grey-text text-darken-4"><i class="medium material-icons">airplay</i> Clientes Registrados</h2>
         </div>
 
-            <!-- datos -->
-            <div class="row">
-              <div class="col s12">
-                <ul class="tabs">
-                  <li class="tab col s6"><a  class="active" href="#activas">Activos</a></li>
-                  <li class="tab col s6"><a href="#inactivas">Inactivos</a></li>
-                </ul>
-              </div>
-              <!-- tabla de activos -->
-              <div id="activas" class="col s12">
-                <table class="striped">
-                  <thead>
-                      <tr>
+             <!-- datos -->
+             <div class="row">
+              
+              <table class="striped">
+                <thead>
+                <tr>
                           <th class="center">Id</th>
                           <th>Nombre</th>
                           <th>Apellido</th>
                           <th>Correo electrónico</th>
-                          <th>Identificación</th>
-                          <th>Vencimiento Tarjeta</th>
                           <th class="center">Editar</th>
-                          <th class="center">Desactivar</th>
+                          <th class="center">Eliminar</th>
+                         
                       </tr>
-                  </thead>
-                  <tbody>
-                  <?php foreach($this->model->ListarClienteActivos() as $r): ?>
+                </thead>
+                <tbody>
+                <?php foreach($this->model->ListarCliente() as $r): ?>
                       <tr>
                           <td><?php echo $r->idcliente; ?></td>
                           <td><?php echo $r->nombre; ?></td>
                           <td><?php echo $r->apellido; ?></td>
                           <td><?php echo $r->email; ?></td>
-                          <td><?php echo $r->identificacion; ?></td>
-                          <td><?php echo $r->fechavencimientotarjeta; ?></td>
                           <td class="center">
                               <!-- en la url pasamos parámetros para el controlador -->
                               <!--    controller, metod,id -->
-                              <a href="?c=Cliente&a=Crud&id=<?php echo $r->idcliente; ?>" title="Editar Registro" ><i class="small material-icons blue-text">edit</i></a>
+                              <a href="?c=Cliente&a=Update&id=<?php echo $r->idcliente; ?>" title="Editar Registro" ><i class="small material-icons blue-text">edit</i></a>
                           </td>
+
                           <td class="center">
-                              <a onclick="javascript:return confirm('¿Seguro que desea desactivar este registro?');" href="?c=Cliente&a=CambiarEstado&nuevo_estado=0&id=<?php echo $r->idcliente; ?>" title="Desactivar Registro" ><i class="small material-icons red-text">cancel</i></a>
-                          </td>
+                            <a onclick="javascript:return confirm('¿Seguro que desea eliminar este cliente?');" href="?c=Cliente&a=EliminarCliente&id=<?php echo $r->idcliente; ?>" title="Eliminar Registro" ><i class="small material-icons red-text">delete</i></a>
+                        </td>
+                          
                       </tr>
                   <?php endforeach; ?>
                   </tbody>
@@ -54,43 +46,8 @@
               </div>
               
               <!-- tabla de inactivos -->
-              <div id="inactivas" class="col s12">
-                <table class="striped">
-                  <thead>
-                      <tr>
-                          <th class="center">Id</th>
-                          <th>Nombre</th>
-                          <th>Apellido</th>
-                          <th>Correo electrónico</th>
-                          <th>Identificación</th>
-                          <th>Vencimiento Tarjeta</th>
-                          <th class="center">Editar</th>
-                          <th class="center">Activar</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                  <?php foreach($this->model->ListarClienteInactivos() as $r): ?>
-                      <tr>
-                          <td><?php echo $r->idcliente; ?></td>
-                          <td><?php echo $r->nombre; ?></td>
-                          <td><?php echo $r->apellido; ?></td>
-                          <td><?php echo $r->email; ?></td>
-                          <td><?php echo $r->identificacion; ?></td>
-                          <td><?php echo $r->fechavencimientotarjeta; ?></td>
-                          <td class="center">
-                              <!-- en la url pasamos parámetros para el controlador -->
-                              <!--    controller, metod,id -->
-                              <a href="?c=Cliente&a=Crud&id=<?php echo $r->idcliente; ?>" title="Editar Registro" ><i class="small material-icons blue-text">edit</i></a>
-                          </td>
-                          <td class="center">
-                              <a onclick="javascript:return confirm('¿Seguro que desea desactivar este registro?');" href="?c=Cliente&a=CambiarEstado&nuevo_estado=1&id=<?php echo $r->idcliente; ?>" title="Desactivar Registro" ><i class="small material-icons green-text">check_circle</i></a>
-                          </td>
-                      </tr>
-                  <?php endforeach; ?>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+             
+           
 
       </div>
 

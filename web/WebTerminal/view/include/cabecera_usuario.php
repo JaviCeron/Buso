@@ -36,6 +36,7 @@
     <li><a href="?c=Horario&a=Crud">Horario</a></li>
     <li><a href="?c=Usuario&a=Crud">Usuario</a></li>
 
+    <li><a href="?c=Cliente&a=Crud">Cliente</a></li>
 
     <li class="divider"></li>
   
@@ -51,6 +52,7 @@
     <li class="divider"></li>
     <li><a href="?c=Horario&a=Consultar">Horario</a></li>
     <li><a href="?c=Usuario&a=Consultar">Usuario</a></li>
+    <li><a href="?c=Cliente&a=Consultar">Cliente</a></li>
     <li class="divider"></li>
    
   </ul>
@@ -72,6 +74,7 @@
 
     <li><a href="?c=Horario&a=Crud">Horario</a></li>
     <li><a href="?c=Usuario&a=Crud">Usuarios</a></li>
+    <li><a href="?c=Cliente&a=Crud">Cliente</a></li>
 
     <li class="divider"></li>
    
@@ -85,6 +88,7 @@
     <li class="divider"></li>
     <li><a href="?c=Horario&a=Consultar">Horario</a></li>
     <li><a href="?c=Usuario&a=Consultar">Usuarios</a></li>
+    <li><a href="?c=Cliente&a=Consultar">Cliente</a></li>
     <li class="divider"></li>
   
 
