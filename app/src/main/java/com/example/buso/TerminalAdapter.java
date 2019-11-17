@@ -77,8 +77,8 @@ public class TerminalAdapter extends RecyclerView.Adapter<TerminalAdapter.Produc
 
             textViewCodigo1 = itemView.findViewById(R.id.textViewCodigo1);
             textViewDescripcion1 = itemView.findViewById(R.id.textViewDescripcion1);
-           // textViewPrecio1= itemView.findViewById(R.id.textViewPrecio1);
-            //imageView = itemView.findViewById(R.id.imageView);
+           textViewPrecio1= itemView.findViewById(R.id.textViewPrecio1);
+            imageView = itemView.findViewById(R.id.imageView);
         }
     }
 
