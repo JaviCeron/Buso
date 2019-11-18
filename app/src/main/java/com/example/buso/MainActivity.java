@@ -1,13 +1,13 @@
 package com.example.buso;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,15 +40,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnListar = findViewById(R.id.btnVerTerminales);
+        btnListar = findViewById(R.id.btnAdmin);
 
     }
 
     public void onClick(View view) {
         Intent miIntent=null;
         switch (view.getId()){
-            case R.id.btnVerTerminales:
-                miIntent=new Intent(MainActivity.this,Consulta_RecyclerViewTerminal.class);
+            case R.id.btnAdmin:
+                miIntent=new Intent(MainActivity.this, SesionAdmin.class);
+                break;
+            case R.id.btnCliente:
+                miIntent=new Intent(MainActivity.this, WebCliente.class);
                 break;
         }
         if (miIntent!=null){

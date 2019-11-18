@@ -22,11 +22,13 @@ public class Activity_list extends AppCompatActivity {
     lista.add("bus302");
     lista.add("bus512");
 
-    ArrayAdapter adaptador = new ArrayAdapter(this,android.R.layout.simple_list_item_1, lista);
+    /*ArrayAdapter adaptador = new ArrayAdapter(this,android.R.layout.simple_list_item_1, lista);
     ArrayAdapter<CharSequence> adapter =ArrayAdapter.createFromResource(this, R.array.Lista, android.R.layout.simple_list_item_1);
 
     listaterminal.setAdapter(adaptador);
 }
 
 
-    }
+    }*/
+}
+}

@@ -15,10 +15,18 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/btnVerTerminales"
+        android:id="@+id/btnAdmin"
         android:textAllCaps="false"
         android:layout_gravity="center"
-        android:text="Ver terminales"
+        android:text="Inicio Administrador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"></Button>
+    <Button
+        android:id="@+id/btnCliente"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:text="Inicio Cliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onClick"></Button>
