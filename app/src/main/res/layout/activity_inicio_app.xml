@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".InicioApp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="0.33"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_weight="0.33"
+            android:background="@drawable/header"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="288dp"
+            android:layout_weight="0.33">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buso"
+                    android:fontFamily="cursive"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="80dp"></TextView>
+            </LinearLayout>
+            
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:layout_weight="0.80"
+            android:background="@drawable/footer">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btnInicio"
+                            android:onClick="onClick"
+                            android:elevation="5dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_inicio"></Button>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Inicio"
+                            android:textColor="@color/blanco"
+                            android:textAlignment="center"
+                            android:textSize="15dp"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btnCliente"
+                            android:onClick="onClick"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_cliente"></Button>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Usuario"
+                            android:textColor="@color/blanco"
+                            android:textAlignment="center"
+                            android:textSize="15dp"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btnAdmin"
+                            android:layout_width="30dp"
+                            android:onClick="onClick"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_admin"></Button>
+
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Admin"
+                            android:textColor="@color/blanco"
+                            android:textAlignment="center"
+                            android:textSize="15dp"></TextView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
