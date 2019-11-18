@@ -22,7 +22,7 @@
                 <tbody>
                 <?php foreach($this->model->ListarRutass($terminal->idterminal) as $r): ?>
                       <tr>
-                          <td class="center"> <a href="?c=Ruta&a=VerRutas&id=<?php echo $r->idterminal; ?>"  title="Ver Horarios"> <?php echo $r->numero_ruta; ?>  </a> </td>
+                          <td class="center"> <a href="?c=Horario&a=VerHorario&id=<?php echo $r->idruta; ?>"  title="Ver Horarios"> <?php echo $r->numero_ruta; ?>  </a> </td>
                          
                       </tr>
                   <?php endforeach; ?>

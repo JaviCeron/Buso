@@ -1,7 +1,7 @@
 <?php
 require_once 'model/Conexion.php';  
 
-  $controller = 'principal';
+  $controller = 'principalcliente';
 
   // Toda esta lógica hara el papel de un FrontController
   if(!isset($_REQUEST['c']))

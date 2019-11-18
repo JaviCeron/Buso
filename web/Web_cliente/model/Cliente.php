@@ -9,7 +9,6 @@ class Cliente
     public $email;
     public $clave;
    
-
 	public function __CONSTRUCT()
 	{
 		try
@@ -31,7 +30,7 @@ class Cliente
 		try 
 		{
 			$stm = $this->pdo
-			          ->prepare("SELECT * FROM cliente WHERE email = ? AND clave = MD5(?) AND estado = 1");
+			          ->prepare("SELECT * FROM cliente WHERE email = ? AND clave = MD5(?) ");
 			          
 
 			$stm->execute(array($email, $clave));
@@ -67,23 +66,9 @@ class Cliente
 			die($e->getMessage());
 		}
 	}
-    public function EliminarCliente($id)
-	{
-		try 
-		{
-			$stm = $this->pdo
-			            ->prepare("DELETE FROM cliente WHERE idcliente = ?");			          
+	
 
-			$stm->execute(array($id));
-		} catch (Exception $e) 
-		{
-			die($e->getMessage());
-		}
-	}
-
-
-
-	public function Obtenercliente($id)
+	public function ObtenerCliente($id)
 	{
 		try 
 		{
@@ -105,9 +90,8 @@ class Cliente
 	}
 	
 
-
-
 	
+
 	public function ActualizarCliente($data)
 	{
 		try 
@@ -164,5 +148,7 @@ class Cliente
 			die($e->getMessage());
 		}
 	}
+
+  
 
 }

@@ -7,14 +7,17 @@
     - Carga las vistas como respuesta al usuario
 */
 require_once 'model/Horario.php';
+require_once 'model/Ruta.php';
 
 class HorarioController{
     
     private $model;
+    private $modelRuta;
     
     public function __CONSTRUCT(){
         //inicializa el modelo Alumno
         $this->model = new Horario();
+        $this->modelRuta = new Ruta();
     }
     
     public function Index(){
@@ -30,7 +33,31 @@ class HorarioController{
         require_once 'view/mostrar_horario.php';
         require_once 'view/include/pie.php';
     }
+    public function VerHorario(){
+        $ruta = new Ruta();
+        
+        if(isset($_REQUEST['id'])){
+            //si tiene el parámetro asignado ejecutamos el método
+            $ruta = $this->modelRuta->ObtenerRuta($_REQUEST['id']);
+        }
+        //llama todas las partes de la vista
+        require_once 'view/include/cabecera_cliente.php';
+        require_once 'view/mostrar_horario_ruta.php';
+        require_once 'view/include/pie.php';
+    }
 
+    public function VerDetalles(){
+        $horario = new Horario();
+        
+        if(isset($_REQUEST['id'])){
+            //si tiene el parámetro asignado ejecutamos el método
+            $horario = $this->model->ObtenerHorario($_REQUEST['id']);
+        }
+        //llama todas las partes de la vista
+        require_once 'view/include/cabecera_cliente.php';
+        require_once 'view/mostrar_detalle_ruta.php';
+        require_once 'view/include/pie.php';
+    }
     public function EliminarTerminal(){
         $this->model->EliminaTerminal($_REQUEST['id']);
         header('Location: index.php?c=Terminal&a=Consultar');

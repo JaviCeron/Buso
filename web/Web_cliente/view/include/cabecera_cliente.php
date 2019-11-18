@@ -22,8 +22,7 @@
 
 <!-- opciones del menú usuario-->
 <ul id="usuario" class="dropdown-content">
-  <li><a href="?c=Usuario&a=ActualizarClave">Cambiar Clave</a></li>
-  <li class="divider"></li>
+ 
   <li><a href="index.php" title="<?php echo $_SESSION["email"]; ?>">Salir</a></li>
 </ul>
 
@@ -43,8 +42,7 @@
   <!-- para el nav-bar-->  
 <!-- opciones del menú usuario-->
 <ul id="usuario-m" class="dropdown-content">
-  <li><a href="?c=Usuario&a=ActualizarClave">Cambiar Clave</a></li>
-  <li class="divider"></li>
+
   <li><a href="index.php" title="<?php echo $_SESSION["email"]; ?>">Salir</a></li>
 </ul>
   <!-- opciones del menú registrar-->

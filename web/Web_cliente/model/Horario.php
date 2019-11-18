@@ -23,8 +23,47 @@ class Horario
 			die($e->getMessage());
 		}
 	}
+	public function ListarHorario($idruta)
+	{
+		try 
+		{
+			$stm = $this->pdo
+			          ->prepare("SELECT h.idhorario as idhorario, h.hora_salida as hora_salida, h.hora_meta as hora_meta, s.numero_ruta as numero_ruta FROM horario as h INNER JOIN ruta AS s ON h.idruta = s.idruta WHERE h.idruta = ?");
+			          
+			$stm->execute(array($idruta));
+			return $stm->fetchAll(PDO::FETCH_OBJ);
+		}
+        catch (Throwable $t)//php7
+        {
+			die($t->getMessage());
+        }
+		catch(Exception $e)//php5
+		{
+			die($e->getMessage());
+		}
+	}
 
-	public function ListarHorario()
+	public function ListarDetalle($idhorario)
+	{
+		try 
+		{
+			$stm = $this->pdo
+			          ->prepare("SELECT h.idruta as idruta, s.hora_salida as hora_salida, s.hora_meta as hora_meta, h.numero_ruta as numero_ruta, h.nombre_bus as nombre_bus, h.tarifa as tarifa, h.terminal_destino as terminal_destino FROM ruta as h INNER JOIN horario AS s ON h.idhorario = s.idhorario WHERE h.idhorario = ?");
+			          
+			$stm->execute(array($idhorario));
+			return $stm->fetchAll(PDO::FETCH_OBJ);
+		}
+        catch (Throwable $t)//php7
+        {
+			die($t->getMessage());
+        }
+		catch(Exception $e)//php5
+		{
+			die($e->getMessage());
+		}
+	}
+
+	public function ListarHorarioo()
 	{
 		try
 		{

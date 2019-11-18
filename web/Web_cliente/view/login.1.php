@@ -1,12 +1,12 @@
 ﻿<!-- cuerpo de login -->
-  <div class="container">
+<div class="container">
     <div class="section">
 
       <!--   Icon Section   -->
       <div class="row">
         <div class="col s12">
-            <h2 class="center grey-text text-darken-4"><i class="medium material-icons">account_circle</i> 
-              Iniciar Sesión/Cliente
+            <h2 class="center  grey-text text-darken-2"><i class="medium material-icons">account_circle</i> 
+              Iniciar Sesión/cliente
             </h2>
 
             <!-- formulario -->

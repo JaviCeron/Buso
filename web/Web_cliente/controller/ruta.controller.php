@@ -8,16 +8,17 @@
 */
 require_once 'model/Ruta.php';
 require_once 'model/Terminal.php';
-
+require_once 'model/Horario.php';
 class RutaController{
     
     private $model;
     private $modelTerminal;
-    
+    private $modelHorario;
     public function __CONSTRUCT(){
         //inicializa el modelo Alumno
         $this->model = new Ruta();
         $this->modelTerminal = new Terminal();
+        $this->modelHorario = new Horario();
     }
     
     public function VerRutas(){
@@ -30,6 +31,19 @@ class RutaController{
         //llama todas las partes de la vista
         require_once 'view/include/cabecera_cliente.php';
         require_once 'view/mostrar_rutas_terminal.php';
+        require_once 'view/include/pie.php';
+    }
+
+    public function VerDetalles(){
+        $horario = new Horario();
+        
+        if(isset($_REQUEST['id'])){
+            //si tiene el parámetro asignado ejecutamos el método
+            $horario = $this->modelHorario->ObtenerHorario($_REQUEST['id']);
+        }
+        //llama todas las partes de la vista
+        require_once 'view/include/cabecera_cliente.php';
+        require_once 'view/mostrar_detalle_ruta.php';
         require_once 'view/include/pie.php';
     }
     public function Index(){

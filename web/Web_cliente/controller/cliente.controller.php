@@ -61,9 +61,9 @@ class ClienteController{
         $cliente->idcliente > 0 
             ? $this->model->ActualizarCliente($cliente)
             : $this->model->RegistrarCliente($cliente);
-        
+            
         //redirecciona a la vista index
-        header('Location: index.php?c=Cliente&a=Consultar');
+        header('Location: index.php?c=Loginclien&a=Index');
     }
 
     //////////////////////////////////////////////////////////////////////
