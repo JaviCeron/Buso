@@ -1,4 +1,4 @@
-<footer class="page-footer green darken-4">
+<footer class="page-footer #00c853 green accent-4">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
