@@ -16,7 +16,7 @@ public class WebAdministrador extends AppCompatActivity {
         WebView webviewadmin =findViewById(R.id.webviewadmin);
         webviewadmin.getSettings().setJavaScriptEnabled(true);//Permite que algunas paginas funcionen bien
         webviewadmin.getSettings().setBuiltInZoomControls(true);//Permite e zoom si la pagina no es responsive
-        webviewadmin.loadUrl("http://192.168.43.82/proyecto_cine_2019_final_grupo2/");
+        webviewadmin.loadUrl("http://192.168.43.82/BusoApp/Buso/web/WebTerminal/");
 
         //Metodo que permite navegar dentro del WebView sin abrir el navegador
 
