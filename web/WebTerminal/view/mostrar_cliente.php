@@ -4,7 +4,7 @@
       <!--   Icon Section   -->
       <div class="row">
         <div class="col s12">
-            <h2 class="center grey-text text-darken-4"><i class="medium material-icons">airplay</i> Clientes Registrados</h2>
+            <h2 class="center grey-text text-darken-4"><i class="medium material-icons">account_circle</i> Clientes Registrados</h2>
         </div>
 
              <!-- datos -->
