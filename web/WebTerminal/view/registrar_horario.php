@@ -10,7 +10,7 @@
       <!--   Icon Section   -->
       <div class="row">
         <div class="col s12">
-            <h2 class="center  grey-text text-darken-3"><i class="medium material-icons">event</i> 
+            <h2 class="center  grey-text text-darken-3"><i class="medium material-icons">query_builder</i> 
               <!--si el atributo Alumno->id es diferente de nulo muestra el nombre-->
          Registrar horario
             </h2>
