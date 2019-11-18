@@ -1,9 +1,9 @@
-<footer class="page-footer green darken-4">
+<footer class="page-footer #00c853 green accent-4">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">Buso</h5>
-          <p class="grey-text text-lighten-4">Desarrollo de aplicaciones para la Web.<br>
+          <p class="grey-text text-lighten-4">Desarrollo de aplicaciones Android.<br>
           ITCA-FEPADE Regional Zacatecoluca.<br>
           CicloII-2019.</p>
 
@@ -15,7 +15,7 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Desarrollado por <a class="yellow-text" href="https://www.facebook.com/Grupo numero 2" target="_blank">grupo Buso</a>
+      Desarrollado por <a class="yellow-text" href="https://www.facebook.com/" target="_blank">Buso enterprise</a>
       </div>
     </div>
   </footer>

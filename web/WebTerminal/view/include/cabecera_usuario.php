@@ -93,7 +93,7 @@
   
 
   </ul>
-  <nav class="green darken-4" role="navigation">
+  <nav class="#00c853 green accent-4" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="?c=Principal&a=Index" class="brand-logo" title="Terminal">
         <i >Buso</i></a>
       <ul class="right hide-on-med-and-down">
@@ -108,7 +108,7 @@
         
       </ul>
 
-      <ul id="nav-mobile" class="sidenav grey darken-2">
+      <ul id="nav-mobile" class="sidenav #4caf50 green">
         <li><a href="?c=Principal&a=Index" title="Inicio"><i class="material-icons white-text">home</i></a></li>
         <!-- para el menú registro -->
         <li><a class="dropdown-trigger white-text" href="#!" data-target="registro-m">Registrar<i class="material-icons right white-text">arrow_drop_down</i></a></li>

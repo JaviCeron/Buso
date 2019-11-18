@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,11 +9,12 @@
 
 
     <LinearLayout
+        android:layout_weight="0.20"
         android:layout_marginRight="40dp"
         android:layout_marginLeft="40dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
         <TextView
             android:id="@+id/tv1"
             android:layout_width="match_parent"
@@ -44,6 +46,21 @@
             android:layout_marginTop="25dp"
             android:layout_marginRight="15dp"
             android:text="Verificar" />
+
+
+<LinearLayout
+    android:layout_weight="0.33"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"></LinearLayout>
+
+        <TextView
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pongase en contácto con los desarrolladores al siguiente correo para asignarle su respectiva clave">
+        </TextView>
+
     </LinearLayout>
 
 
