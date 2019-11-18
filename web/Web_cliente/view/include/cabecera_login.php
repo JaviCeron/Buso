@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <nav class="green darken-4" role="navigation">
+  <nav class="#00c853 green accent-4" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="index.php" class="brand-logo" title="Cine para todos..."><i class="large material-icons">movie_filter</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="index.php" title="Inicio"><i class="material-icons">home</i></a></li>

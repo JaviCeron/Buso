@@ -59,7 +59,7 @@
   
 
   </ul>
-  <nav class="green darken-4" role="navigation">
+  <nav class="#00c853 green accent-4" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="?c=Principal&a=Index" class="brand-logo" title="Terminal">
         <i >Buso</i></a>
       <ul class="right hide-on-med-and-down">
