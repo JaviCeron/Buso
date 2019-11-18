@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <nav class="#00c853 green accent-4" role="navigation">
+  <nav class="green darken-4" role="navigation">
   <i class="center" >Buso</i></a>  <ul class="right hide-on-med-and-down">
         <li><a href="index.php" title="Inicio"><i class="material-icons">home</i></a></li>
       </ul>
