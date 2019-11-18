@@ -9,7 +9,7 @@
       <!--   Icon Section   -->
       <div class="row">
         <div class="col s12">
-            <h2 class="center  grey-text text-darken-3"><i class="medium material-icons">airline_seat_recline_extra</i> 
+            <h2 class="center  grey-text text-darken-3"><i class="medium material-icons">location_city</i> 
               <!--si el atributo Alumno->id es diferente de nulo muestra el nombre-->
               <?php echo $terminal->idterminal != null ? 'Editar '.$terminal->nombre_terminal : 'Registrar Terminal'; ?>
             </h2>
