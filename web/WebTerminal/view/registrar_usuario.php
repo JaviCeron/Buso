@@ -5,7 +5,7 @@
       <!--   Icon Section   -->
       <div class="row">
         <div class="col s12">
-            <h2 class="center gray-text text-darken-2"><i class="medium material-icons">account_circle</i> 
+            <h2 class="center gray-text text-darken-2"><i class="medium material-icons">person</i> 
               <!--si el atributo Alumno->id es diferente de nulo muestra el nombre-->
               Registrar Usuario
             </h2>
