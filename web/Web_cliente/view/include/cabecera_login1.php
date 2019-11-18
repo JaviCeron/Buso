@@ -20,14 +20,13 @@
 
 <body>
   <nav class="#00c853 green accent-4" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="index.php" class="brand-logo" title="Cine para todos..."><i class="large material-icons">movie_filter</i></a>
+  <i class="center" >Buso</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="index.php" title="Inicio"><i class="material-icons">home</i></a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav green darken-3">
-        <li class="center"><i class="material-icons white-text">movie_filter</i></li>
-        <li><a class="white-text" href="index.php" title="Inicio"><i class="material-icons white-text">home</i> Inicio</a></li>
+         <li><a class="white-text" href="index.php" title="Inicio"><i class="material-icons white-text">home</i> Inicio</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
