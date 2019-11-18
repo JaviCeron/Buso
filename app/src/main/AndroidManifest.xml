@@ -14,19 +14,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity
-            android:name=".Inicio"
-            android:label="@string/title_activity_inicio"></activity>
-        <activity android:name=".RecyclerView_Horario" />
-        <activity android:name=".WebAdministrador" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".InicioApp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Consulta_RecyclerViewTerminal"></activity>
+        <activity
+            android:name=".Inicio"
+            android:label="@string/title_activity_inicio">
+
+        </activity>
+        <activity android:name=".RecyclerView_Horario" />
+        <activity android:name=".WebAdministrador" />
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Consulta_RecyclerViewTerminal" />
         <activity android:name=".WebCliente" />
         <activity android:name=".SesionAdmin" />
     </application>
